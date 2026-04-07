@@ -1,0 +1,674 @@
+/* ============================================
+   FONTS
+   ============================================ */
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('../fonts/PPRightGrotesk-Dark.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('../fonts/PPRightGrotesk-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('../fonts/PPRightGrotesk-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('../fonts/PPRightGrotesk-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ============================================
+   TOKENS
+   ============================================ */
+
+:root {
+  --orange: #FF6F0D;
+  --bone: #FDF7EA;
+  --dark: #0A0A0A;
+  --gray: #D7D7D7;
+  --blue: #1DD0FD;
+
+  --font: 'PP Right Grotesk', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --tracking: -0.02em;
+
+  --card-radius: 12px;
+  --modal-speed: 0.4s;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* ============================================
+   RESET
+   ============================================ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 300;
+  letter-spacing: var(--tracking);
+  background-color: var(--dark);
+  color: var(--bone);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+button {
+  font-family: inherit;
+  letter-spacing: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* ============================================
+   MAIN VIEW
+   ============================================ */
+
+.main-view {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: env(safe-area-inset-top, 20px) 24px env(safe-area-inset-bottom, 20px) 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* ============================================
+   SPLAT LOGO
+   ============================================ */
+
+.splat-logo {
+  width: clamp(28px, 5dvh, 40px);
+  height: auto;
+  margin-bottom: clamp(8px, 1.5dvh, 16px);
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .splat-logo {
+    transition: opacity 0.5s var(--ease-out-expo);
+  }
+}
+
+.splat-logo.visible {
+  opacity: 1;
+}
+
+
+/* ============================================
+   CARD STACK
+   ============================================ */
+
+.card-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 340px;
+  perspective: 800px;
+  perspective-origin: 50% 30%;
+}
+
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.card {
+  width: 100%;
+  height: clamp(72px, 12dvh, 96px);
+  background-color: var(--bone);
+  color: var(--dark);
+  border-radius: var(--card-radius);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 20px;
+  text-align: left;
+  opacity: 0;
+  transform: translateZ(-80px) translateY(20px) scale(0.88);
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card {
+    transition:
+      opacity 0.5s var(--ease-out-expo),
+      transform 0.6s var(--ease-out-expo);
+  }
+
+  .card:active {
+    transform: scale(0.97) !important;
+    transition: transform 0.1s ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateZ(0) translateY(0) scale(1);
+}
+
+.card-icon {
+  width: clamp(28px, 4dvh, 36px);
+  height: auto;
+  flex-shrink: 0;
+}
+
+.card-label {
+  font-weight: 800;
+  font-size: clamp(18px, 3dvh, 24px);
+  line-height: 0.9;
+  display: block;
+}
+
+.card-sublabel {
+  font-weight: 300;
+  font-size: clamp(11px, 1.6dvh, 13px);
+  line-height: 1.1;
+  opacity: 0.6;
+  display: block;
+  margin-top: 3px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ============================================
+   SPARK CONNECTORS
+   ============================================ */
+
+.spark-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: clamp(24px, 4dvh, 36px);
+  gap: 0;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spark-connector {
+    transition: opacity 0.4s var(--ease-out-expo);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spark-connector {
+    opacity: 1;
+  }
+}
+
+.spark-connector.visible {
+  opacity: 1;
+}
+
+.spark-line {
+  width: 2px;
+  flex: 1;
+  background-color: var(--orange);
+}
+
+.spark-diamond {
+  width: 8px;
+  height: 8px;
+  background-color: var(--orange);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+
+/* ============================================
+   PRIVACY LINK
+   ============================================ */
+
+.privacy-link {
+  margin-top: clamp(8px, 1.5dvh, 16px);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  color: var(--bone);
+  opacity: 0.4;
+}
+
+.privacy-link.visible {
+  opacity: 0.4;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .privacy-link {
+    transition: opacity 0.5s var(--ease-out-expo);
+  }
+
+  .privacy-link:active {
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .privacy-link {
+    opacity: 0.4;
+  }
+}
+
+
+/* ============================================
+   MODALS
+   ============================================ */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: var(--dark);
+  color: var(--bone);
+  transform: translateY(100%);
+  visibility: hidden;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .modal {
+    transition:
+      transform var(--modal-speed) var(--ease-out-expo),
+      visibility var(--modal-speed);
+  }
+}
+
+.modal.open {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.modal-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: env(safe-area-inset-top, 0) 0 env(safe-area-inset-bottom, 0) 0;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(253, 247, 234, 0.1);
+}
+
+.modal-title {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 0.9;
+}
+
+.modal-close {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bone);
+  border-radius: 50%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .modal-close:active {
+    background-color: rgba(253, 247, 234, 0.1);
+  }
+}
+
+.modal-body {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+}
+
+.modal-body--legal {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.modal-body--legal h3 {
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 0.9;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: var(--orange);
+}
+
+.modal-body--legal h3:first-child {
+  margin-top: 0;
+}
+
+.modal-body--legal p {
+  margin-bottom: 8px;
+  opacity: 0.85;
+}
+
+.modal-body--legal ul {
+  margin-bottom: 8px;
+  padding-left: 16px;
+}
+
+.modal-body--legal li {
+  list-style: disc;
+  margin-bottom: 4px;
+  opacity: 0.85;
+}
+
+.modal-body--legal strong {
+  font-weight: 500;
+  color: var(--bone);
+}
+
+.modal-intro {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+
+/* ============================================
+   STEPS (Guía)
+   ============================================ */
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--orange);
+  color: var(--dark);
+  font-weight: 800;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-content strong {
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.2;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.step-content p {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.7;
+}
+
+
+/* ============================================
+   FORMS
+   ============================================ */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.optional {
+  font-weight: 300;
+  text-transform: none;
+  opacity: 0.5;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 16px; /* prevents iOS zoom */
+  letter-spacing: var(--tracking);
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(253, 247, 234, 0.2);
+  background-color: rgba(253, 247, 234, 0.05);
+  color: var(--bone);
+  outline: none;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--orange);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(253, 247, 234, 0.3);
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23FDF7EA' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.form-select option {
+  background-color: var(--dark);
+  color: var(--bone);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.btn-submit {
+  font-family: var(--font);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: var(--tracking);
+  padding: 14px 24px;
+  border-radius: 8px;
+  background-color: var(--orange);
+  color: var(--dark);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 4px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn-submit {
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+
+  .btn-submit:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+  }
+}
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-feedback {
+  font-size: 13px;
+  line-height: 1.4;
+  min-height: 18px;
+}
+
+.form-feedback.success {
+  color: #079B4A;
+}
+
+.form-feedback.error {
+  color: #DD1F1F;
+}
+
+
+/* ============================================
+   WHATSAPP BUTTON
+   ============================================ */
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 8px;
+  background-color: var(--orange);
+  color: var(--dark);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: var(--tracking);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .whatsapp-btn {
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+
+  .whatsapp-btn:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+  }
+}
+
+.whatsapp-icon {
+  flex-shrink: 0;
+}
+
+
+/* ============================================
+   SEPARATOR
+   ============================================ */
+
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.separator-line {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(253, 247, 234, 0.15);
+}
+
+.separator-text {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.4;
+  text-transform: lowercase;
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Batidos de proteínas en Orangetheory Fitness Velázquez, Madrid. Guía, sugerencias y soporte.">
+  <title>Fuel The Afterburn · Orangetheory Velázquez</title>
+
+  <link rel="preload" href="fonts/PPRightGrotesk-Dark.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PPRightGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/orangetheory_splat.png" type="image/png">
+</head>
+<body>
+
+  <!-- ===== MAIN VIEW (no-scroll, full viewport) ===== -->
+  <main class="main-view" id="mainView">
+
+    <!-- Splat logo -->
+    <img
+      src="assets/orangetheory_splat.png"
+      alt="Orangetheory Fitness"
+      class="splat-logo"
+      width="36"
+      height="36"
+    >
+
+    <!-- Card stack with perspective -->
+    <div class="card-stack">
+
+      <!-- Card 1: Guía -->
+      <button class="card" data-modal="modal-guia" aria-label="Abrir guía de uso">
+        <img src="assets/OTF_Icon_Coach_Dark_LS_RGB.png" alt="" class="card-icon" width="32" height="32">
+        <div class="card-text">
+          <span class="card-label">Guía</span>
+          <span class="card-sublabel">Cómo usar la máquina</span>
+        </div>
+      </button>
+
+      <!-- Spark connector 1 -->
+      <div class="spark-connector" aria-hidden="true">
+        <div class="spark-line"></div>
+        <div class="spark-diamond"></div>
+        <div class="spark-line"></div>
+      </div>
+
+      <!-- Card 2: Sugerencias -->
+      <button class="card" data-modal="modal-sugerencias" aria-label="Abrir sugerencias">
+        <img src="assets/OTF_Icon_Fire_Dark_LS_RGB.png" alt="" class="card-icon" width="32" height="32">
+        <div class="card-text">
+          <span class="card-label">Sugerencias</span>
+          <span class="card-sublabel">Sabores y preferencias</span>
+        </div>
+      </button>
+
+      <!-- Spark connector 2 -->
+      <div class="spark-connector" aria-hidden="true">
+        <div class="spark-line"></div>
+        <div class="spark-diamond"></div>
+        <div class="spark-line"></div>
+      </div>
+
+      <!-- Card 3: Soporte -->
+      <button class="card" data-modal="modal-soporte" aria-label="Abrir soporte">
+        <img src="assets/OTF_Icon_Heartrate_Dark_LS_RGB.png" alt="" class="card-icon" width="32" height="32">
+        <div class="card-text">
+          <span class="card-label">Soporte</span>
+          <span class="card-sublabel">WhatsApp y contacto</span>
+        </div>
+      </button>
+
+    </div>
+
+    <!-- Privacy link -->
+    <button class="privacy-link" data-modal="modal-privacidad">
+      Privacidad y condiciones
+    </button>
+
+  </main>
+
+
+  <!-- ===== MODAL: GUÍA ===== -->
+  <div class="modal" id="modal-guia" role="dialog" aria-modal="true" aria-labelledby="guia-title" aria-hidden="true">
+    <div class="modal-inner">
+      <header class="modal-header">
+        <h2 id="guia-title" class="modal-title">Guía</h2>
+        <button class="modal-close" aria-label="Cerrar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </header>
+      <div class="modal-body">
+
+        <p class="modal-intro">Tu batido en 5 pasos.</p>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+              <strong>Dile a tu coach</strong>
+              <p>Selecciona quién te recomendó la máquina.</p>
+              <select id="trainer-select" class="form-select" aria-label="Selecciona tu coach">
+                <option value="" disabled selected>Elige tu coach</option>
+              </select>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+              <strong>Elige tu sabor</strong>
+              <p>Selecciona en la pantalla de la máquina el batido que prefieras.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+              <strong>Paga contactless</strong>
+              <p>Acerca tu tarjeta o móvil al lector de pago.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number">4</span>
+            <div class="step-content">
+              <strong>Coloca tu vaso</strong>
+              <p>Pon el vaso bajo el dispensador y espera a que se llene.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number">5</span>
+            <div class="step-content">
+              <strong>Fuel the afterburn</strong>
+              <p>Disfruta de tu batido. Te lo has ganado.</p>
+            </div>
+          </li>
+        </ol>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== MODAL: SUGERENCIAS ===== -->
+  <div class="modal" id="modal-sugerencias" role="dialog" aria-modal="true" aria-labelledby="sugerencias-title" aria-hidden="true">
+    <div class="modal-inner">
+      <header class="modal-header">
+        <h2 id="sugerencias-title" class="modal-title">Sugerencias</h2>
+        <button class="modal-close" aria-label="Cerrar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </header>
+      <div class="modal-body">
+
+        <p class="modal-intro">Queremos saber qué piensas.</p>
+
+        <form id="form-sugerencias" class="form" novalidate>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="form-group">
+            <label for="sug-nombre">Nombre <span class="optional">(opcional)</span></label>
+            <input type="text" id="sug-nombre" name="nombre" class="form-input" autocomplete="given-name">
+          </div>
+
+          <div class="form-group">
+            <label for="sug-email">Email <span class="optional">(opcional)</span></label>
+            <input type="email" id="sug-email" name="email" class="form-input" autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="sug-sabor-nuevo">Sabor que te gustaría ver</label>
+            <input type="text" id="sug-sabor-nuevo" name="sabor_nuevo" class="form-input" placeholder="Ej: Mango, Fresa-Plátano...">
+          </div>
+
+          <div class="form-group">
+            <label for="sug-sabor-fav">Sabores que te encantan</label>
+            <input type="text" id="sug-sabor-fav" name="sabor_favorito" class="form-input" placeholder="Los que ya has probado y repites">
+          </div>
+
+          <div class="form-group">
+            <label for="sug-general">Otras sugerencias</label>
+            <textarea id="sug-general" name="sugerencias" class="form-textarea" rows="3" placeholder="¿Qué más te gustaría ver en la máquina?"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar sugerencias</button>
+          <div class="form-feedback" aria-live="polite"></div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== MODAL: SOPORTE ===== -->
+  <div class="modal" id="modal-soporte" role="dialog" aria-modal="true" aria-labelledby="soporte-title" aria-hidden="true">
+    <div class="modal-inner">
+      <header class="modal-header">
+        <h2 id="soporte-title" class="modal-title">Soporte</h2>
+        <button class="modal-close" aria-label="Cerrar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </header>
+      <div class="modal-body">
+
+        <p class="modal-intro">Estamos para ayudarte.</p>
+
+        <!-- WhatsApp CTA -->
+        <a href="https://wa.me/34623345790" target="_blank" rel="noopener" class="whatsapp-btn">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Escríbenos por WhatsApp
+        </a>
+
+        <div class="separator">
+          <span class="separator-line"></span>
+          <span class="separator-text">o</span>
+          <span class="separator-line"></span>
+        </div>
+
+        <!-- Contact form -->
+        <form id="form-soporte" class="form" novalidate>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="form-group">
+            <label for="sop-nombre">Nombre</label>
+            <input type="text" id="sop-nombre" name="nombre" class="form-input" required autocomplete="given-name">
+          </div>
+
+          <div class="form-group">
+            <label for="sop-email">Email</label>
+            <input type="email" id="sop-email" name="email" class="form-input" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="sop-mensaje">Descripción del problema</label>
+            <textarea id="sop-mensaje" name="mensaje" class="form-textarea" rows="3" required placeholder="Cuéntanos qué ha pasado"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar mensaje</button>
+          <div class="form-feedback" aria-live="polite"></div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== MODAL: PRIVACIDAD ===== -->
+  <div class="modal" id="modal-privacidad" role="dialog" aria-modal="true" aria-labelledby="privacidad-title" aria-hidden="true">
+    <div class="modal-inner">
+      <header class="modal-header">
+        <h2 id="privacidad-title" class="modal-title">Privacidad</h2>
+        <button class="modal-close" aria-label="Cerrar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </header>
+      <div class="modal-body modal-body--legal">
+
+        <h3>Responsable del tratamiento</h3>
+        <p>Real Zero S.L., con domicilio en Madrid, España.</p>
+
+        <h3>Finalidad</h3>
+        <p>Los datos recogidos a través de los formularios de esta web se utilizan exclusivamente para gestionar sugerencias de producto y solicitudes de soporte técnico relacionadas con la máquina dispensadora de batidos instalada en Orangetheory Fitness Velázquez.</p>
+
+        <h3>Base legal</h3>
+        <p>El tratamiento se basa en el consentimiento del usuario al enviar voluntariamente el formulario, conforme al artículo 6.1.a del Reglamento General de Protección de Datos (RGPD).</p>
+
+        <h3>Conservación de datos</h3>
+        <p>Los datos se conservarán mientras sean necesarios para la finalidad indicada y, en todo caso, durante los plazos legalmente establecidos.</p>
+
+        <h3>Derechos</h3>
+        <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, portabilidad, limitación y oposición escribiendo a: <strong>privacidad@realzero.es</strong></p>
+
+        <h3>Cookies</h3>
+        <p>Esta web no utiliza cookies de seguimiento ni herramientas de analítica. No se almacena ninguna información en tu dispositivo.</p>
+
+        <h3>Condiciones de uso de la máquina</h3>
+        <p>La máquina dispensadora de batidos es un servicio ofrecido por Real Zero S.L. dentro de las instalaciones de Orangetheory Fitness Velázquez. El uso de la máquina implica la aceptación de estas condiciones:</p>
+        <ul>
+          <li>El producto dispensado es de consumo inmediato.</li>
+          <li>Consulta los ingredientes y alérgenos en la pantalla de la máquina antes de realizar tu compra.</li>
+          <li>Los pagos se realizan exclusivamente mediante tarjeta contactless.</li>
+          <li>Para cualquier incidencia, contacta con nosotros a través de la sección de Soporte.</li>
+        </ul>
+
+        <h3>Sobre esta web</h3>
+        <p>Esta página web es operada por Real Zero S.L. y está diseñada como punto de soporte para los usuarios de la máquina. No es un sitio web oficial de Orangetheory Fitness. Los elementos de marca de Orangetheory se utilizan con autorización del franquiciado local.</p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/app.js"></script>
+</body>
+</html>
