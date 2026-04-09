@@ -7,8 +7,8 @@
 const CONFIG = {
   trainers: ['Alejo', 'Antonio', 'Bea', 'Jorge', 'Paco'],
   whatsapp: '34623345790',
-  formspreeSugerencias: 'https://formspree.io/f/xxxxx', // Replace with your Formspree endpoint
-  formspreeSoporte: 'https://formspree.io/f/xxxxx',     // Replace with your Formspree endpoint
+  formspreeSugerencias: 'https://formspree.io/f/xlgokpda', // Replace with your Formspree endpoint
+  formspreeSoporte: 'https://formspree.io/f/xgopbnvg',     // Replace with your Formspree endpoint
 };
 
 
