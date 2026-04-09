@@ -18,7 +18,7 @@ const CONFIG = {
 
 document.addEventListener('DOMContentLoaded', () => {
   populateTrainers();
-  setupEntranceAnimation();
+  setupIntro();
   setupModals();
   setupForms();
 });
@@ -37,6 +37,31 @@ function populateTrainers() {
     option.value = name;
     option.textContent = name;
     select.appendChild(option);
+  });
+}
+
+
+/* ============================================
+   INTRO (QR scan zoom)
+   ============================================ */
+
+function setupIntro() {
+  const overlay = document.getElementById('introOverlay');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!overlay || prefersReduced) {
+    // Skip intro, show cards immediately
+    overlay?.classList.add('done');
+    setupEntranceAnimation();
+    return;
+  }
+
+  // Wait for intro animation to finish, then remove overlay and start card entrance
+  overlay.addEventListener('animationend', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.add('done');
+      setupEntranceAnimation();
+    }
   });
 }
 

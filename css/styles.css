@@ -122,6 +122,72 @@ ul, ol {
 
 
 /* ============================================
+   INTRO OVERLAY (QR scan zoom)
+   ============================================ */
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.intro-qr {
+  width: 65vmin;
+  height: auto;
+  border-radius: 12px;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .intro-qr {
+    animation: qr-zoom 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  .intro-overlay {
+    animation: overlay-fade 0.5s ease 1.5s forwards;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-overlay {
+    display: none;
+  }
+}
+
+.intro-overlay.done {
+  display: none;
+}
+
+@keyframes qr-zoom {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(3.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(8);
+    opacity: 0;
+  }
+}
+
+@keyframes overlay-fade {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+
+/* ============================================
    MAIN VIEW
    ============================================ */
 
