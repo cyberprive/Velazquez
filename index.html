@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#0A0A0A">
-  <title>Real Zero · Bebidas deportivas. Al instante.</title>
-  <meta name="description" content="Infraestructura de recuperación post-entrenamiento para estudios premium. Instalamos máquinas Zero Touch 2 que preparan batidos frescos en 30 segundos.">
+  <meta name="theme-color" content="#111318">
+  <title>Real Zero · Alimentación deportiva. Al instante.</title>
+  <meta name="description" content="Infraestructura automatizada de recuperación para estudios premium. Batidos de proteína frescos en 30 segundos, dentro del estudio.">
   <link rel="canonical" href="https://realzero.es/">
   <link rel="alternate" hreflang="es" href="https://realzero.es/">
   <link rel="alternate" hreflang="en" href="https://realzero.es/en/">
   <link rel="alternate" hreflang="x-default" href="https://realzero.es/">
 
-  <meta property="og:title" content="Real Zero · Bebidas deportivas. Al instante.">
-  <meta property="og:description" content="Infraestructura de recuperación post-entrenamiento para estudios premium.">
+  <meta property="og:title" content="Real Zero · Alimentación deportiva. Al instante.">
+  <meta property="og:description" content="Infraestructura automatizada de recuperación para estudios premium.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://realzero.es/">
   <meta property="og:locale" content="es_ES">
@@ -20,13 +20,11 @@
   <meta property="og:site_name" content="Real Zero">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Real Zero · Bebidas deportivas. Al instante.">
-  <meta name="twitter:description" content="Infraestructura de recuperación post-entrenamiento para estudios premium.">
 
-  <link rel="preload" href="/fonts/PPRightGrotesk-Dark.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/PPRightGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/css/site.css">
-  <link rel="icon" href="/assets/orangetheory_splat.png" type="image/png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 
   <script type="application/ld+json">
   {
@@ -36,7 +34,6 @@
     "legalName": "Real Zero, Sociedad Limitada",
     "taxID": "B-24961658",
     "url": "https://realzero.es",
-    "logo": "https://realzero.es/assets/orangetheory_splat.png",
     "email": "hola@realzero.es",
     "address": {
       "@type": "PostalAddress",
@@ -57,13 +54,18 @@
   <nav class="nav" aria-label="Principal">
     <div class="nav-inner">
       <a href="/" class="nav-brand" aria-current="page">
-        <img src="/assets/orangetheory_splat.png" alt="" width="24" height="24">
+        <span class="nav-brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="11" cy="11" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </span>
         <span>Real Zero</span>
       </a>
       <div class="nav-links">
         <a href="/maquina">Máquina</a>
         <a href="/para-gimnasios">Para Gimnasios</a>
-        <a href="/caso-otf-velazquez">Caso OTF</a>
+        <a href="/caso-otf-velazquez">Socio de lanzamiento</a>
         <a href="/nosotros">Nosotros</a>
       </div>
       <div class="nav-right">
@@ -79,9 +81,11 @@
   <!-- ===== HERO ===== -->
   <header class="hero">
     <div class="container">
-      <p class="eyebrow">Post-workout infrastructure</p>
-      <h1 class="h1">Bebidas deportivas.<br>Al instante.</h1>
-      <p class="lead">Instalamos máquinas <strong style="color: var(--bone); font-weight: 500;">Zero Touch 2</strong> que preparan batidos de proteína frescos en 30 segundos, sin plantilla, sin inventario, dentro del estudio. Recuperación inmediata al terminar la clase.</p>
+      <div style="margin-bottom: 20px;">
+        <span class="chip">Soft launch · Mayo 2026</span>
+      </div>
+      <h1>Alimentación deportiva.<br>Al instante.</h1>
+      <p class="lead">Infraestructura automatizada de recuperación post-entrenamiento. Instalamos sistemas <strong style="color: var(--text); font-weight: 500;">Zero Touch 2</strong> que preparan batidos frescos en 30 segundos, dentro de estudios de fitness premium. Sin plantilla. Sin inventario.</p>
       <div class="hero-actions">
         <a href="/para-gimnasios" class="btn btn-primary">Para gimnasios</a>
         <a href="/maquina" class="btn btn-ghost">Ver la máquina</a>
@@ -89,41 +93,50 @@
     </div>
   </header>
 
-  <!-- ===== SOCIAL PROOF ===== -->
-  <section class="proof">
-    <div class="container" style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
-      <img src="/assets/orangetheory_splat.png" alt="Orangetheory Fitness" width="20" height="20">
-      <span>Operativa en <strong>Orangetheory Fitness Velázquez</strong>, Madrid</span>
-      <span aria-hidden="true" style="color: var(--orange);">·</span>
-      <span>Batido fresco en <strong>30 s</strong></span>
-      <span aria-hidden="true" style="color: var(--orange);">·</span>
-      <span>Pago contactless</span>
+  <!-- ===== LAUNCH PARTNER STRIP ===== -->
+  <section class="section-tight" style="border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <p class="mono" style="margin-bottom: 6px;">SOCIO DE LANZAMIENTO</p>
+        <p style="font-family: var(--font-display); font-size: 20px; font-weight: 600; letter-spacing: -0.01em;">Orangetheory Fitness Velázquez · Madrid</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+        <div><p class="mono">BATIDO EN</p><p style="font-family: var(--font-display); font-size: 22px; font-weight: 600;">30 s</p></div>
+        <div><p class="mono">PAGO</p><p style="font-family: var(--font-display); font-size: 22px; font-weight: 600;">Contactless</p></div>
+        <div><p class="mono">DISPONIBILIDAD</p><p style="font-family: var(--font-display); font-size: 22px; font-weight: 600;">24 / 7</p></div>
+      </div>
     </div>
   </section>
 
   <!-- ===== THREE-UP VALUE ===== -->
   <section class="section">
     <div class="container">
-      <p class="eyebrow" style="text-align: center; margin-bottom: 16px;">Qué cambia</p>
-      <h2 class="h2" style="text-align: center; margin-bottom: 48px; max-width: 20ch; margin-inline: auto;">Una instalación, tres ganancias.</h2>
+      <p class="eyebrow" style="margin-bottom: 12px;">Qué cambia</p>
+      <h2 class="h2" style="margin-bottom: 56px; max-width: 22ch;">Una instalación. Tres audiencias. Una ganancia clara.</h2>
       <div class="grid grid-3">
 
         <article class="feature-card">
-          <img src="/assets/OTF_Icon_Heartrate_Dark_LS_RGB.png" alt="" width="32" height="32">
-          <h3>Para los miembros</h3>
-          <p>Un batido fresco, limpio y rápido justo al terminar la clase. Menos fricción, más recuperación, ritual que se instala solo.</p>
+          <span class="icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+          </span>
+          <h3>Miembros</h3>
+          <p>Un batido fresco, limpio y rápido al terminar la clase. Menos fricción, más recuperación, un ritual que se instala solo en el entrenamiento.</p>
         </article>
 
         <article class="feature-card">
-          <img src="/assets/OTF_Icon_Coach_Dark_LS_RGB.png" alt="" width="32" height="32">
-          <h3>Para los coaches</h3>
-          <p>Un producto más que recomendar, con trazabilidad por coach. La recomendación deja de ser un consejo suelto y se convierte en sistema.</p>
+          <span class="icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.3L21 9l-5 4.3 1.5 6.7L12 16.8 6.5 20 8 13.3 3 9l6.6-.7z"/></svg>
+          </span>
+          <h3>Coaches</h3>
+          <p>Un producto concreto que recomendar con trazabilidad por coach. La recomendación deja de ser un consejo suelto y se convierte en sistema.</p>
         </article>
 
         <article class="feature-card">
-          <img src="/assets/OTF_Icon_Fire_Dark_LS_RGB.png" alt="" width="32" height="32">
-          <h3>Para el estudio</h3>
-          <p>Nuevo canal de ingresos recurrentes sin ampliar plantilla, sin manejar inventario y sin afectar al flujo operativo de la clase.</p>
+          <span class="icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7l9-4 9 4v14"/><path d="M9 21v-8h6v8"/></svg>
+          </span>
+          <h3>El estudio</h3>
+          <p>Un canal de ingresos recurrentes sin ampliar plantilla, sin manejar inventario, sin afectar al flujo operativo de la clase.</p>
         </article>
 
       </div>
@@ -133,65 +146,73 @@
   <!-- ===== HOW IT WORKS ===== -->
   <section class="section-tight" style="border-top: 1px solid var(--hairline);">
     <div class="container">
-      <p class="eyebrow" style="margin-bottom: 16px;">Cómo funciona</p>
-      <h2 class="h2" style="margin-bottom: 40px;">Cuatro pasos. Ningún intermediario.</h2>
-      <div class="steps-inline">
+      <p class="eyebrow" style="margin-bottom: 12px;">Cómo funciona</p>
+      <h2 class="h2" style="margin-bottom: 56px;">Cuatro pasos. Ningún intermediario.</h2>
+      <div class="steps">
         <div class="step">
           <span class="step-num">01 · Escanear</span>
-          <span class="step-title">Escanea el QR en la máquina</span>
-          <span class="step-body">El miembro llega al final de clase, escanea y selecciona sabor en pantalla.</span>
+          <span class="step-title">QR en la máquina</span>
+          <span class="step-body">El miembro termina la clase, escanea el código y selecciona sabor en pantalla.</span>
         </div>
         <div class="step">
           <span class="step-num">02 · Pagar</span>
-          <span class="step-title">Pago contactless</span>
+          <span class="step-title">Contactless</span>
           <span class="step-body">Tarjeta o móvil. Sin efectivo, sin fricción. Procesado por operador autorizado.</span>
         </div>
         <div class="step">
           <span class="step-num">03 · Mezclar</span>
           <span class="step-title">Batido fresco en 30 s</span>
-          <span class="step-body">La máquina dispensa el producto recién mezclado con proteína de alta calidad.</span>
+          <span class="step-body">La máquina prepara y dispensa el producto con proteína de alta calidad.</span>
         </div>
         <div class="step">
           <span class="step-num">04 · Recuperar</span>
-          <span class="step-title">Recuperación inmediata</span>
-          <span class="step-body">Consumo al salir del estudio. Ritual cerrado. Hábito instalado.</span>
+          <span class="step-title">Ritual cerrado</span>
+          <span class="step-body">Consumo inmediato al salir del estudio. Sin caminar, sin esperar, sin pensar.</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CASE STUDY TEASER ===== -->
+  <!-- ===== LAUNCH PARTNER CASE (pre-launch) ===== -->
   <section class="section">
     <div class="container">
-      <article class="feature-card" style="background: var(--bone); color: var(--dark); display: grid; gap: 24px; grid-template-columns: 1fr; max-width: none;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <img src="/assets/orangetheory_splat.png" alt="" width="28" height="28" style="width: 28px; height: 28px;">
-          <span style="font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange);">Caso real</span>
+      <div class="grid grid-2" style="align-items: stretch;">
+        <div style="display: flex; flex-direction: column; justify-content: center; gap: 20px;">
+          <span class="chip">Próximamente · Mayo 2026</span>
+          <h2 class="h2" style="max-width: 18ch; margin: 0;">Primer despliegue:<br>Orangetheory Velázquez.</h2>
+          <p class="lead" style="margin: 0;">El soft launch arranca en mayo de 2026 en Orangetheory Fitness Velázquez, Madrid. Integración con cinco coaches del estudio y puesta en producción del sistema completo — máquina, app, métricas por coach, reportes mensuales.</p>
+          <div><a href="/caso-otf-velazquez" class="btn btn-ghost">Ver el plan de lanzamiento →</a></div>
         </div>
-        <h3 class="h2" style="margin: 0;">Orangetheory Fitness Velázquez, Madrid.</h3>
-        <p style="font-size: 17px; line-height: 1.5; color: rgba(10,10,10,0.7); max-width: 60ch;">Piloto activo desde enero 2026. Integración con los coaches Alejo, Antonio, Bea, Jorge y Paco. Adopción diaria en crecimiento, recomendación integrada en el cierre de clase.</p>
-        <div>
-          <a href="/caso-otf-velazquez" class="btn" style="background: var(--dark); color: var(--bone);">Leer el caso completo →</a>
+        <div class="media">
+          <img src="/assets/coach-tasting-otf-velazquez.jpg" alt="Daniel Escobar con los coaches de Orangetheory Fitness Velázquez durante la sesión de cata previa al lanzamiento.">
+          <p class="media-caption">Sesión de cata con los coaches · Orangetheory Fitness Velázquez · Abril 2026</p>
         </div>
-      </article>
+      </div>
     </div>
   </section>
 
   <!-- ===== FOUNDER ===== -->
-  <section class="section" style="border-top: 1px solid var(--hairline);">
-    <div class="container-narrow" style="text-align: center;">
-      <p class="eyebrow" style="margin-bottom: 16px;">Founder</p>
-      <h2 class="h2" style="max-width: 20ch; margin-inline: auto; margin-bottom: 24px;">Construyendo lo que le faltaba al estudio donde entreno.</h2>
-      <p class="lead" style="margin-inline: auto;">Real Zero nace de una frustración personal: salir de clase y no tener un batido limpio y rápido en ese momento exacto en el que lo necesitas. Daniel Escobar, fundador, construyó el sistema operativo para resolverlo.</p>
-      <p style="margin-top: 28px;"><a href="/nosotros" class="btn btn-ghost">Conoce la historia →</a></p>
+  <section class="section-tight" style="border-top: 1px solid var(--hairline);">
+    <div class="container">
+      <div class="founder">
+        <div class="founder-photo">
+          <img src="/assets/founder-daniel.jpg" alt="Daniel Escobar, fundador de Real Zero." onerror="this.style.display='none'">
+        </div>
+        <div>
+          <p class="eyebrow" style="margin-bottom: 14px;">Founder</p>
+          <h2 class="h2" style="margin-bottom: 20px; max-width: 22ch;">Construimos lo que le faltaba al estudio donde entrenamos.</h2>
+          <p class="lead" style="margin-bottom: 24px;">Daniel Escobar fundó Real Zero desde el lado del miembro: tras dos años entrenando en Orangetheory identificó el hueco entre el final de la clase y el primer batido disponible. Real Zero es el sistema operativo que cierra ese hueco.</p>
+          <a href="/nosotros" class="btn btn-ghost">Conoce la historia →</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ===== CTA BAND ===== -->
-  <section class="cta-band">
+  <section class="band">
     <div class="container-narrow">
       <h2>¿Tienes un estudio? Hablemos.</h2>
-      <p>Presentamos propuestas específicas para cada estudio en menos de 72 horas. Sin coste de instalación, sin compromiso.</p>
+      <p>Propuesta específica para tu estudio en menos de 72 horas. Sin coste de instalación. Sin compromiso.</p>
       <a href="/contacto" class="btn">Solicitar propuesta</a>
     </div>
   </section>
@@ -201,11 +222,15 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div>
-          <h4>Real Zero</h4>
+          <a href="/" class="footer-brand">Real Zero</a>
+          <p class="footer-brand-line">Infraestructura automatizada de recuperación post-entrenamiento para estudios premium.</p>
+        </div>
+        <div>
+          <h4>Navegar</h4>
           <ul>
             <li><a href="/maquina">La máquina</a></li>
             <li><a href="/para-gimnasios">Para gimnasios</a></li>
-            <li><a href="/caso-otf-velazquez">Caso OTF Velázquez</a></li>
+            <li><a href="/caso-otf-velazquez">Socio de lanzamiento</a></li>
             <li><a href="/nosotros">Nosotros</a></li>
             <li><a href="/prensa">Prensa</a></li>
           </ul>
