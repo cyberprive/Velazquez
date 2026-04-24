@@ -1,14 +1,13 @@
 /* ============================================
    CONFIGURATION
-   Edit these values to update coaches,
-   WhatsApp number, or form endpoints.
+   Edit these values to update WhatsApp number
+   or form endpoints.
    ============================================ */
 
 const CONFIG = {
-  trainers: ['Alejo', 'Antonio', 'Bea', 'Jorge', 'Paco'],
   whatsapp: '34623345790',
-  formspreeSugerencias: 'https://formspree.io/f/xlgokpda', // Replace with your Formspree endpoint
-  formspreeSoporte: 'https://formspree.io/f/xgopbnvg',     // Replace with your Formspree endpoint
+  formspreeSugerencias: 'https://formspree.io/f/xlgokpda',
+  formspreeSoporte: 'https://formspree.io/f/xgopbnvg',
 };
 
 
@@ -17,28 +16,10 @@ const CONFIG = {
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  populateTrainers();
   setupIntro();
   setupModals();
   setupForms();
 });
-
-
-/* ============================================
-   TRAINER DROPDOWN
-   ============================================ */
-
-function populateTrainers() {
-  const select = document.getElementById('trainer-select');
-  if (!select) return;
-
-  CONFIG.trainers.forEach(name => {
-    const option = document.createElement('option');
-    option.value = name;
-    option.textContent = name;
-    select.appendChild(option);
-  });
-}
 
 
 /* ============================================
@@ -286,9 +267,6 @@ function setupForm(formId, endpoint) {
         feedback.textContent = 'Enviado. Gracias por tu mensaje.';
         feedback.classList.add('success');
         form.reset();
-        // Re-set the trainer select default if applicable
-        const trainerSelect = form.querySelector('#trainer-select');
-        if (trainerSelect) trainerSelect.selectedIndex = 0;
       } else {
         throw new Error('Server error');
       }
