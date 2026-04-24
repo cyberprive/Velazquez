@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+._*
+
+# Internal / private — never publish
+Context/
+Branding Guide/
+BRAND_MANUAL.md
+
+# Claude Code scratch
+.claude/worktrees/
+.claude/plans/
+
+# Temporary / build artifacts
+*.log
+.vercel
+node_modules/
