@@ -82,6 +82,26 @@
         </div>
       </button>
 
+      <!-- Spark connector 3 -->
+      <div class="spark-connector" aria-hidden="true">
+        <div class="spark-line"></div>
+        <div class="spark-diamond"></div>
+        <div class="spark-line"></div>
+      </div>
+
+      <!-- Card 4: Alérgenos -->
+      <button class="card" data-modal="modal-alergenos" aria-label="Abrir información de alérgenos">
+        <svg class="card-icon" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#FF6F0D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 4.5 L29.2 27 L2.8 27 Z"/>
+          <line x1="16" y1="13" x2="16" y2="20"/>
+          <circle cx="16" cy="23.5" r="1.1" fill="#FF6F0D" stroke="none"/>
+        </svg>
+        <div class="card-text">
+          <span class="card-label">Alérgenos</span>
+          <span class="card-sublabel">Información por producto</span>
+        </div>
+      </button>
+
     </div>
 
     <!-- Privacy link -->
@@ -257,6 +277,65 @@
           <button type="submit" class="btn-submit">Enviar mensaje</button>
           <div class="form-feedback" aria-live="polite"></div>
         </form>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== MODAL: ALÉRGENOS ===== -->
+  <div class="modal" id="modal-alergenos" role="dialog" aria-modal="true" aria-labelledby="alergenos-title" aria-hidden="true">
+    <div class="modal-inner">
+      <header class="modal-header">
+        <h2 id="alergenos-title" class="modal-title">Alérgenos</h2>
+        <button class="modal-close" aria-label="Cerrar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </header>
+      <div class="modal-body modal-body--legal">
+
+        <p style="background: rgba(255, 111, 13, 0.12); border: 1px solid var(--orange); border-radius: 8px; padding: 14px 16px; margin-bottom: 24px; line-height: 1.5; opacity: 1;">
+          <strong style="color: var(--orange); display: block; margin-bottom: 6px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 11px;">Aviso de contaminación cruzada</strong>
+          <span style="color: var(--bone); opacity: 0.9;">Todos los batidos se preparan en un sistema compartido que manipula <strong>leche, soja, gluten y frutos secos</strong>. Cualquier producto puede contener trazas de estos alérgenos aunque no figuren como ingrediente principal. Si tienes alergia o intolerancia diagnosticada, evita el consumo o consulta previamente con tu médico.</span>
+        </p>
+
+        <p style="opacity: 0.65; margin-bottom: 24px; font-size: 12px;">A continuación, los alérgenos declarados por cada producto. <strong>Contiene</strong> = ingrediente real (declaración legal). <strong>Puede contener</strong> = posibles trazas por contaminación cruzada en origen. Antes de cada compra, la pantalla de la estación muestra esta misma información del producto seleccionado.</p>
+
+        <!-- Product cards -->
+
+        <h3>Classic Refuel</h3>
+        <p style="opacity: 0.6; font-size: 11px; margin-top: -4px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">Optimum Nutrition</p>
+        <p><strong>Contiene:</strong> leche, soja.</p>
+        <p><strong>Puede contener:</strong> gluten, huevo, frutos de cáscara, cacahuetes.</p>
+
+        <h3>Cookie Refuel</h3>
+        <p style="opacity: 0.6; font-size: 11px; margin-top: -4px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">Life Pro · Speculoos</p>
+        <p><strong>Contiene:</strong> leche, gluten (galleta Lotus Biscoff con harina de trigo).</p>
+        <p><strong>Puede contener:</strong> soja.</p>
+
+        <h3>Fast Chocolate Refuel</h3>
+        <p style="opacity: 0.6; font-size: 11px; margin-top: -4px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">Dymatize ISO100</p>
+        <p><strong>Contiene:</strong> leche, soja (lecitina de soja).</p>
+        <p><strong>Puede contener:</strong> huevo.</p>
+
+        <h3>Premium Refuel</h3>
+        <p style="opacity: 0.6; font-size: 11px; margin-top: -4px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">Sascha Fitness</p>
+        <p><strong>Contiene:</strong> leche.</p>
+        <p><strong>Puede contener:</strong> soja, huevo, trigo/gluten, cacahuetes, frutos de cáscara.</p>
+
+        <h3>Smart Refuel</h3>
+        <p style="opacity: 0.6; font-size: 11px; margin-top: -4px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">Zumub</p>
+        <p><strong>Contiene:</strong> leche.</p>
+        <p><strong>Puede contener:</strong> soja, gluten, frutos de cáscara, huevo, cacahuetes.</p>
+
+        <h3>Vegan Refuel</h3>
+        <p style="opacity: 0.6; font-size: 11px; margin-top: -4px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">BioTech USA</p>
+        <p><strong>Contiene:</strong> soja (lecitina de soja).</p>
+        <p><strong>Puede contener:</strong> leche, huevo, gluten, crustáceos, dióxido de azufre, frutos de cáscara.</p>
+
+        <p style="margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(253, 247, 234, 0.1); opacity: 0.65; font-size: 12px;">Información de ingredientes completos y valores nutricionales disponible en la pantalla de la estación antes de cada compra. Para consultas sobre alérgenos o intolerancias, escríbenos por WhatsApp al <a href="https://wa.me/34623345790" target="_blank" rel="noopener" style="color: var(--bone); text-decoration: underline;">+34 623 345 790</a>.</p>
 
       </div>
     </div>
