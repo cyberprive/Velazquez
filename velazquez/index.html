@@ -13,6 +13,14 @@
   <link rel="preload" href="/fonts/PPRightGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/velazquez/css/styles.css">
   <link rel="icon" href="/assets/orangetheory_splat.png" type="image/png">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "@vercel/analytics": "/node_modules/@vercel/analytics/dist/index.mjs"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -408,6 +416,7 @@
   </div>
 
 
+  <script type="module" src="/js/analytics.js"></script>
   <script src="/velazquez/js/app.js"></script>
 </body>
 </html>

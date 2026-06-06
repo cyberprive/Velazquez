@@ -1,0 +1,16 @@
+{
+  "name": "velazquez",
+  "version": "1.0.0",
+  "description": "Real Zero - Infraestructura de recuperación post-entrenamiento",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build step required'",
+    "lint": "echo 'No linter configured'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  },
+  "devDependencies": {},
+  "type": "module"
+}

@@ -13,6 +13,14 @@
   <link rel="stylesheet" href="/css/site.css">
   <link rel="icon" href="/assets/realzero-logo-dark.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/realzero-logo-dark.png">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "@vercel/analytics": "/node_modules/@vercel/analytics/dist/index.mjs"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -133,6 +141,7 @@
     </div>
   </footer>
 
+  <script type="module" src="/js/analytics.js"></script>
   <script src="/js/site.js"></script>
 </body>
 </html>
