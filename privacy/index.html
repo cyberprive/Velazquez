@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#111318">
   <title>Privacy Notice · Real Zero</title>
-  <meta name="description" content="Real Zero S.L. Privacy Notice. Data Controller, Processors (including Nayax for payments), purposes, rights and contact.">
+  <meta name="description" content="Real Zero S.L. Privacy Notice. Data Controller, processors (Nayax and others), retention, transfers and rights under GDPR/LOPDGDD.">
   <link rel="canonical" href="https://realzero.es/privacy">
   <link rel="alternate" hreflang="es" href="https://realzero.es/legal/privacidad">
   <link rel="alternate" hreflang="en" href="https://realzero.es/privacy">
@@ -38,96 +38,173 @@
     <div class="container-narrow">
 
       <h1>Privacy Notice</h1>
-      <p class="legal-meta">Last updated: 10 June 2026</p>
-
-      <p>This Privacy Notice describes how Real Zero S.L. handles personal data collected through its website, customer-service channels, and automated recovery stations. It is intended as a concise reference. For the full data-protection policy, see the <a href="/en/legal/privacy">extended privacy policy</a> (English) or the <a href="/legal/privacidad">política de privacidad</a> (Spanish).</p>
+      <p class="legal-meta">Last updated: 10 June 2026 · Version 1.0</p>
 
       <h2>1. Data Controller</h2>
-      <p>The data controller responsible for processing your personal data is:</p>
+      <p><strong>Real Zero, S.L.</strong> ("Real Zero") is the controller of personal data collected through its automated recovery stations (in-person vending) and, in the future, its online drink-pack store.</p>
       <p>
-        <strong>Real Zero, S.L.</strong> ("Real Zero")<br>
-        Tax ID (NIF): B-24961658<br>
+        Tax ID (NIF / VAT): B-24961658<br>
         Registered office: Calle Redencilla del Camino 9 — Escalera G, 5°B, 28050 Madrid, Spain<br>
-        Phone: <a href="tel:+34623345790">+34 623 345 790</a><br>
-        Privacy contact: <a href="mailto:privacidad@realzero.es">privacidad@realzero.es</a><br>
-        General contact: <a href="mailto:hola@realzero.es">hola@realzero.es</a>
+        Contact: <a href="mailto:info@realzero.es">info@realzero.es</a> · <a href="tel:+34623345790">+34 623 345 790</a>
       </p>
 
-      <h2>2. Data we process</h2>
-      <p>Depending on how you interact with Real Zero, we may process the following categories of personal data:</p>
-      <ul>
-        <li><strong>Contact data</strong> — name, email, phone, company, message content (when you submit a form or contact us by email or WhatsApp).</li>
-        <li><strong>Payment data</strong> — when you purchase a product at a Real Zero recovery station, payment is processed by our payments processor (see Section 3). Real Zero <em>does not</em> store full card numbers or sensitive cardholder data; we receive only the transaction reference, amount, masked PAN, timestamp, and authorisation result needed for accounting, refunds and incident management.</li>
-        <li><strong>Station-usage data</strong> — anonymised or pseudonymised operational data from the recovery stations (product selected, time of service, station identifier) used for service quality, hygiene traceability, and reporting.</li>
-        <li><strong>Website-usage data</strong> — privacy-respecting analytics that do not identify individual users. See our <a href="/en/legal/cookies">cookie policy</a>.</li>
-      </ul>
-
-      <h2>3. Processors</h2>
-      <p>Real Zero engages the following processors, each bound by a Data Processing Agreement that complies with Article 28 GDPR:</p>
+      <h2>2. What we collect and why</h2>
       <table>
         <thead>
-          <tr><th>Processor</th><th>Purpose</th><th>Location</th></tr>
+          <tr><th>Data category</th><th>When collected</th><th>Legal basis (GDPR)</th><th>Purpose</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td><a href="https://www.nayax.com/legal-and-privacy/privacy-policy/" target="_blank" rel="noopener"><strong>Nayax Ltd.</strong></a></td>
-            <td>Contactless payment processing at Real Zero stations (card / Apple Pay / Google Pay / Samsung Pay). Nayax acts as our payments processor; the full cardholder data flow is handled by Nayax under PCI-DSS, never by Real Zero.</td>
-            <td>Israel / EU (SCCs)</td>
+            <td><strong>Transaction data</strong>: card brand (Visa, Mastercard…), card last 4 digits, BIN, payment token (when paying with Monyx wallet), payment method, timestamp, amount, product, station</td>
+            <td>At each purchase</td>
+            <td>Art. 6(1)(b) — performance of the sales contract</td>
+            <td>Process payment, issue receipt, fraud prevention</td>
           </tr>
           <tr>
-            <td><a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Vercel Inc.</a></td>
-            <td>Hosting of realzero.es</td>
-            <td>USA (SCCs)</td>
+            <td><strong>Derived recurring-customer identifier</strong> (brand + last 4, or Monyx token)</td>
+            <td>Computed from the above</td>
+            <td>Art. 6(1)(f) — legitimate interest</td>
+            <td>Internal loyalty analytics: spot returning customers, improve product mix</td>
           </tr>
           <tr>
-            <td><a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree Inc.</a></td>
-            <td>Web form submission processing</td>
-            <td>USA (SCCs)</td>
+            <td><strong>Billing data</strong> (name, tax ID, address) when a named invoice is requested</td>
+            <td>On customer request</td>
+            <td>Art. 6(1)(c) — legal obligation (Spanish tax law)</td>
+            <td>Issue and retain invoices</td>
           </tr>
           <tr>
-            <td><a href="https://www.whatsapp.com/legal/business-terms" target="_blank" rel="noopener">WhatsApp Business (Meta)</a></td>
-            <td>Customer messaging via WhatsApp Business</td>
-            <td>Ireland / USA</td>
+            <td><strong>Online-order data</strong> (name, email, shipping address, Stripe-tokenized payment data) — <em>forthcoming</em></td>
+            <td>When buying a drink pack on the website</td>
+            <td>Art. 6(1)(b) — performance of contract</td>
+            <td>Process the order, ship the product, send order updates</td>
           </tr>
         </tbody>
       </table>
 
-      <h3>Nayax — Payment Processing</h3>
-      <p>When you pay at a Real Zero recovery station, the card or mobile-wallet transaction is processed by <strong>Nayax Ltd.</strong> acting as a processor on Real Zero's behalf. Nayax also acts as an independent controller for certain technical and anti-fraud purposes related to the payment service. You can read Nayax's privacy policy at <a href="https://www.nayax.com/legal-and-privacy/privacy-policy/" target="_blank" rel="noopener">https://www.nayax.com/legal-and-privacy/privacy-policy/</a>.</p>
+      <p><strong>We never collect or store</strong> the full card number (PAN) or CVV; special categories of data (health, religion, ideology, biometric data, etc.); or data on minors under 16. Our product is aimed at adult athletes.</p>
 
-      <h2>4. Purposes and legal basis</h2>
-      <ul>
-        <li><strong>Responding to enquiries</strong> — consent (Art. 6.1.a GDPR) when you submit a form, or pre-contractual measures (Art. 6.1.b GDPR) when your enquiry relates to a potential commercial relationship.</li>
-        <li><strong>Processing your payment at a station</strong> — performance of the contract (Art. 6.1.b GDPR) between you and Real Zero for the purchase of the product.</li>
-        <li><strong>Accounting, tax and refund obligations</strong> — legal obligation (Art. 6.1.c GDPR).</li>
-        <li><strong>Service quality, hygiene traceability and fraud prevention</strong> — legitimate interest (Art. 6.1.f GDPR), balanced against your rights and freedoms.</li>
-      </ul>
+      <h2>3. Processors and third parties</h2>
+      <p>To operate the service we rely on third-party providers. Some act as <strong>processors</strong> (handling data on our instructions); others are <strong>independent controllers</strong>. All are EU-based or covered by a valid GDPR transfer mechanism (Standard Contractual Clauses).</p>
+      <table>
+        <thead>
+          <tr><th>Provider</th><th>Role</th><th>GDPR role</th><th>Location</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Nayax Europe UAB</strong> (Lithuania) and <strong>Nayax Ltd.</strong> (Israel)</td>
+            <td>In-station payment processing, telemetry, transaction feed</td>
+            <td>Processor (sales data); Controller (operator KYC data)</td>
+            <td>EU + Israel (with SCCs + Schrems-II Additional Safeguards). <a href="https://www.nayax.com/legal-and-privacy/privacy-policy/" target="_blank" rel="noopener">Nayax Privacy Policy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Nayaxvend Iberica SL</strong></td>
+            <td>Local distributor (KYC + commercial relationship)</td>
+            <td>Independent controller</td>
+            <td>Spain</td>
+          </tr>
+          <tr>
+            <td><strong>Stripe Payments Europe Ltd.</strong> <em>(forthcoming)</em></td>
+            <td>Online-store payment processing</td>
+            <td>Processor</td>
+            <td>Ireland. <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe Privacy Policy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Holded SL</strong></td>
+            <td>Accounting and invoicing software</td>
+            <td>Independent controller for accounting data</td>
+            <td>Spain. <a href="https://www.holded.com/privacy" target="_blank" rel="noopener">Holded Privacy Policy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Render Services Inc.</strong></td>
+            <td>Hosting of the internal analytics app</td>
+            <td>Processor</td>
+            <td>EU (Frankfurt region)</td>
+          </tr>
+          <tr>
+            <td><strong>Turso (ChiselStrike Inc.)</strong></td>
+            <td>Analytics database</td>
+            <td>Processor</td>
+            <td>EU</td>
+          </tr>
+          <tr>
+            <td><strong>Vercel Inc.</strong></td>
+            <td>Public-website hosting</td>
+            <td>Processor</td>
+            <td>USA (SCCs). <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Vercel Privacy Policy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Cloudflare Inc.</strong></td>
+            <td>CDN and internal-console access control</td>
+            <td>Processor</td>
+            <td>Global, with SCCs</td>
+          </tr>
+          <tr>
+            <td><strong>Resend</strong></td>
+            <td>Transactional email delivery</td>
+            <td>Processor</td>
+            <td>EU</td>
+          </tr>
+          <tr>
+            <td><strong>Formspree Inc.</strong></td>
+            <td>Website-form submission processing</td>
+            <td>Processor</td>
+            <td>USA (SCCs). <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree Privacy Policy</a></td>
+          </tr>
+          <tr>
+            <td><strong>WhatsApp Business (Meta)</strong></td>
+            <td>Customer messaging via WhatsApp Business</td>
+            <td>Independent controller for messaging metadata</td>
+            <td>Ireland / USA. <a href="https://www.whatsapp.com/legal/business-terms" target="_blank" rel="noopener">WhatsApp Business Terms</a></td>
+          </tr>
+          <tr>
+            <td><strong>Anthropic PBC</strong></td>
+            <td>AI for internal operational recommendations</td>
+            <td>Processor</td>
+            <td>US under SCCs. Only aggregate sales metrics are sent — <strong>never identifiable end-customer data</strong></td>
+          </tr>
+        </tbody>
+      </table>
 
-      <h2>5. Retention</h2>
+      <h2>4. Retention</h2>
+      <table>
+        <thead><tr><th>Data type</th><th>Retention period</th></tr></thead>
+        <tbody>
+          <tr><td>Aggregate transaction data (loyalty + analytics)</td><td><strong>24 months</strong> from last purchase, then anonymized</td></tr>
+          <tr><td>Invoices and accounting data</td><td><strong>6 years</strong> (Spanish Commercial Code, art. 30)</td></tr>
+          <tr><td>Operator KYC data (us, held by Nayax)</td><td>Duration of the contract + applicable statutory periods</td></tr>
+          <tr><td>Internal-console access logs</td><td><strong>12 months</strong></td></tr>
+          <tr><td>Online order data <em>(forthcoming)</em></td><td><strong>6 years</strong> for tax compliance; marketing data until consent is withdrawn</td></tr>
+        </tbody>
+      </table>
+
+      <h2>5. Your rights</h2>
+      <p>Under the GDPR and LOPDGDD you have the right to:</p>
       <ul>
-        <li>Enquiry data not converted into a commercial relationship: max <strong>12 months</strong> from last contact.</li>
-        <li>Transaction records: retained for the periods required by Spanish tax and commercial law (up to <strong>6 years</strong>).</li>
-        <li>Station support data (form submissions from realzero.es/velazquez): <strong>24 months</strong> from submission.</li>
+        <li><strong>Access</strong> the data we hold about you.</li>
+        <li><strong>Rectify</strong> inaccurate data.</li>
+        <li><strong>Erasure</strong> ("right to be forgotten") when the data is no longer necessary.</li>
+        <li><strong>Restrict</strong> processing.</li>
+        <li><strong>Data portability</strong>: receive your data in a structured format.</li>
+        <li><strong>Object</strong> to processing based on legitimate interest (including loyalty analytics).</li>
+        <li><strong>Not be subject to automated decisions</strong> with significant effects. (We don't take any.)</li>
+        <li><strong>Withdraw consent</strong> at any time, where processing relies on consent.</li>
       </ul>
+      <p>To exercise any of these rights, email <a href="mailto:info@realzero.es">info@realzero.es</a> indicating which right and providing reasonable proof of identity (e.g. the last 4 digits of the card used, the approximate purchase date). We respond within <strong>30 days</strong>.</p>
+      <p>If you believe we have not handled your request properly, you may complain to the <strong>Spanish Data Protection Agency (AEPD)</strong>: <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.</p>
 
       <h2>6. International transfers</h2>
-      <p>Some processors are located outside the European Economic Area. These transfers are covered by the <strong>Standard Contractual Clauses</strong> (SCCs) approved by the European Commission and, where applicable, by supplementary measures designed to guarantee a level of protection essentially equivalent to that of the GDPR.</p>
+      <p>Some providers (notably Nayax Ltd. in Israel and Anthropic in the US) are outside the EEA. Those transfers use the <strong>EU Standard Contractual Clauses</strong> (Commission Decision 2021/914) and, where applicable, the <strong>Additional Safeguards</strong> post-<em>Schrems II</em> described in Annex II of the Data Protection Addendum signed with each provider.</p>
 
-      <h2>7. Your rights</h2>
-      <p>You have the right to <strong>access</strong>, <strong>rectify</strong>, <strong>erase</strong>, <strong>object to</strong>, <strong>restrict</strong> the processing of, and to <strong>data portability</strong> over your personal data. You also have the right to withdraw consent at any time, without affecting the lawfulness of processing carried out before withdrawal.</p>
-      <p>To exercise any of these rights, email <a href="mailto:privacidad@realzero.es">privacidad@realzero.es</a> attaching a copy of an identity document. We will respond within one month.</p>
-      <p>If you believe that the processing of your personal data does not comply with applicable law, you may lodge a complaint with the <a href="https://www.aepd.es" target="_blank" rel="noopener">Spanish Data Protection Agency (AEPD)</a> or your local EU data protection authority.</p>
+      <h2>7. Security</h2>
+      <p>We apply reasonable technical and organisational measures: encryption in transit (HTTPS/TLS), encryption at rest (AES-256), multi-factor authentication on the internal console, least-privilege staff access, and periodic access reviews. Sensitive secrets (API keys, tokens) are stored encrypted with Fernet (AES-128 + HMAC-SHA256) in our database.</p>
 
-      <h2>8. Security</h2>
-      <p>We apply technical and organisational measures appropriate to the risk, including encryption in transit (HTTPS), least-privilege access controls, and PCI-DSS compliance through our payments processor. Real Zero does not store full cardholder data on its own systems.</p>
+      <h2>8. Changes to this Notice</h2>
+      <p>We may update this policy. The current version is always published at this URL with the "Last updated" date above. If changes are material and affect you as an identifiable customer, we will notify you via the appropriate channel (transactional email or a notice on the station).</p>
 
-      <h2>9. Changes to this Notice</h2>
-      <p>We may update this Privacy Notice from time to time. The date of last update appears at the top. Material changes will be communicated through this website.</p>
-
-      <h2>10. Contact</h2>
-      <p>Questions about this Notice or about how Real Zero handles your personal data:</p>
+      <h2>9. Contact</h2>
+      <p>Questions about this Notice or how Real Zero handles your personal data:</p>
       <p>
-        <a href="mailto:privacidad@realzero.es">privacidad@realzero.es</a><br>
+        <a href="mailto:info@realzero.es">info@realzero.es</a><br>
         Real Zero, S.L., Calle Redencilla del Camino 9 — Escalera G, 5°B, 28050 Madrid, Spain
       </p>
 
@@ -159,8 +236,7 @@
         <div>
           <h4>Legal</h4>
           <ul>
-            <li><a href="/privacy" aria-current="page">Privacy Notice</a></li>
-            <li><a href="/en/legal/privacy">Full privacy policy</a></li>
+            <li><a href="/privacy" aria-current="page">Privacy</a></li>
             <li><a href="/en/legal/cookies">Cookies</a></li>
             <li><a href="/en/legal/terms">Terms</a></li>
             <li><a href="/en/legal/notice">Legal notice</a></li>
