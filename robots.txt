@@ -1,4 +1,32 @@
+# Real Zero — robots.txt
+# https://realzero.es
+
 User-agent: *
+Allow: /
+Disallow: /caso-otf-velazquez
+Disallow: /en/case-otf-velazquez
+Disallow: /en/legal/privacy
+
+# AI crawlers — explicit allow with pointer to /llms.txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://realzero.es/sitemap.xml

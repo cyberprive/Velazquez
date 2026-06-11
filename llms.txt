@@ -1,0 +1,63 @@
+# Real Zero
+
+> Premium automated post-workout recovery infrastructure for boutique fitness studios. Real Zero designs, installs and operates recovery stations inside premium studios. Spanish company, headquartered in Madrid, soft launch May 2026 at Orangetheory Fitness Velázquez.
+
+## Company
+
+- [Real Zero — home (ES)](https://realzero.es/): Recuperación post-entrenamiento dentro del estudio. Infraestructura premium para estudios de fitness boutique.
+- [Real Zero — home (EN)](https://realzero.es/en/): Post-workout recovery, inside the studio. Premium recovery infrastructure for boutique fitness studios.
+- [About / Nosotros (ES)](https://realzero.es/nosotros): Founder Daniel Escobar, operating culture, what Real Zero is and is not.
+- [About (EN)](https://realzero.es/en/about): Founder, operating culture, positioning.
+
+## The system
+
+- [El sistema (ES)](https://realzero.es/maquina): The recovery station — member experience, operational layer, studio integration, FAQ.
+- [The system (EN)](https://realzero.es/en/machine): Recovery station as institutional infrastructure.
+
+## For studios (B2B)
+
+- [Para gimnasios (ES)](https://realzero.es/para-gimnasios): Managed service model, what Real Zero delivers, process, who it's for.
+- [For gyms (EN)](https://realzero.es/en/for-gyms): Managed service model for premium studios.
+
+## Launch partner
+
+- [Caso OTF Velázquez (ES)](https://realzero.es/caso-otf-velazquez): Orangetheory Fitness Velázquez, Madrid — Real Zero's launch partner, soft launch May 2026.
+- [OTF Velázquez launch (EN)](https://realzero.es/en/case-otf-velazquez): Launch partner overview.
+
+## Press
+
+- [Prensa (ES)](https://realzero.es/prensa): Media kit, boilerplate, fact sheet, founder bio, press contact.
+- [Press (EN)](https://realzero.es/en/press): Same in English.
+
+## Contact
+
+- [Contacto (ES)](https://realzero.es/contacto): Email, WhatsApp, form. WhatsApp +34 623 345 790.
+- [Contact (EN)](https://realzero.es/en/contact): Same in English.
+
+## Legal
+
+- [Privacy Notice (EN)](https://realzero.es/privacy): Canonical Privacy Notice. Data Controller, processors (Nayax for payments, Vercel, Formspree, WhatsApp, Holded, Stripe, Resend, Cloudflare, Anthropic, Render, Turso), retention, GDPR rights.
+- [Política de Privacidad (ES)](https://realzero.es/legal/privacidad): Versión canónica española.
+- [Cookies (ES)](https://realzero.es/legal/cookies) · [Cookies (EN)](https://realzero.es/en/legal/cookies)
+- [Condiciones (ES)](https://realzero.es/legal/condiciones) · [Terms (EN)](https://realzero.es/en/legal/terms)
+- [Aviso legal (ES)](https://realzero.es/legal/aviso-legal) · [Legal notice (EN)](https://realzero.es/en/legal/notice)
+
+## Key facts
+
+- Legal entity: Real Zero, Sociedad Limitada (Real Zero S.L.)
+- NIF / Tax ID: B-24961658
+- Registered office: Calle Redencilla del Camino 9 — Escalera G, 5°B, 28050 Madrid, Spain
+- Founder: Daniel Escobar
+- Launch partner: Orangetheory Fitness Velázquez, Madrid (soft launch · May 2026)
+- Category: Premium automated recovery infrastructure
+- Model: Managed-service partnership with the studio
+- Market: Spain, focused on Madrid
+- Payments processor: Nayax (Lithuania / Israel) — see [Nayax Privacy Policy](https://www.nayax.com/legal-and-privacy/privacy-policy/)
+
+## Member-facing support (Orangetheory Velázquez installation)
+
+- [Member support · station RZ-VELAZQUEZ-01](https://realzero.es/velazquez): QR-landing for members at the launch-partner station. Guía de uso, sugerencias, soporte WhatsApp, alérgenos por producto, información legal.
+
+## Brand voice
+
+Premium, managed-service, infrastructure-first. Real Zero is **not** a vending brand, not a supplement brand, not an app — it is an operator of post-workout recovery infrastructure inside boutique fitness studios. Protein shakes are the current application layer of a broader in-studio recovery category. Thesis: post-workout recovery has to happen *inside* the studio, not at the door.
