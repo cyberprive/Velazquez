@@ -1,0 +1,390 @@
+/* ============================================
+   Real Zero — QR landing pages (Temporada de fuerza)
+   /fuerza · /proteina · /recuperacion
+   Shares the /velazquez design language:
+   PP Right Grotesk · orange #FF6F0D · bone on dark.
+   PP Right Grotesk ships 300/400/500/800 only —
+   emphasis uses 500, headings use 800.
+   ============================================ */
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('/fonts/PPRightGrotesk-Dark.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('/fonts/PPRightGrotesk-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('/fonts/PPRightGrotesk-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('/fonts/PPRightGrotesk-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ============================================
+   TOKENS
+   ============================================ */
+
+:root {
+  --orange: #FF6F0D;
+  --orange-soft: rgba(255, 111, 13, 0.12);
+  --bone: #FDF7EA;
+  --dark: #0A0A0A;
+  --surface: #141414;
+  --surface-2: #1B1B1B;
+  --line: #2A2A2A;
+  --text-dim: rgba(253, 247, 234, 0.65);
+
+  --font: 'PP Right Grotesk', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --tracking: -0.02em;
+
+  --card-radius: 12px;
+  --maxw: 680px;
+}
+
+
+/* ============================================
+   RESET
+   ============================================ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  background: var(--dark);
+  color: var(--bone);
+  font-family: var(--font);
+  font-weight: 300;
+  letter-spacing: var(--tracking);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { display: block; max-width: 100%; }
+
+strong { font-weight: 500; }
+
+:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+header { padding: 28px 0 8px; }
+
+.eyebrow {
+  display: inline-block;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 800;
+}
+
+.brand { font-size: .85rem; color: var(--text-dim); margin-top: 4px; }
+
+.hero { padding: 28px 0 12px; }
+
+h1 {
+  font-size: clamp(2rem, 7vw, 2.9rem);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  font-weight: 800;
+}
+
+h1 .tachado {
+  position: relative;
+  white-space: nowrap;
+  color: var(--text-dim);
+}
+
+h1 .tachado::after {
+  content: "";
+  position: absolute;
+  left: -2%; right: -2%; top: 52%;
+  height: .09em;
+  background: var(--orange);
+  transform: rotate(-2deg);
+  border-radius: 2px;
+}
+
+h1 em { font-style: normal; color: var(--orange); }
+
+.lede { margin-top: 16px; font-size: 1.05rem; color: var(--text-dim); max-width: 56ch; }
+
+section { padding: 26px 0; }
+
+h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; letter-spacing: -.01em; }
+
+
+/* ============================================
+   CARDS (mito / realidad)
+   ============================================ */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 20px;
+  margin-bottom: 12px;
+}
+
+.card p { color: var(--text-dim); font-size: .95rem; }
+.card p strong { color: var(--bone); }
+
+.mito .tag, .realidad .tag {
+  display: inline-block;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.mito .tag {
+  background: var(--surface-2);
+  color: var(--text-dim);
+  text-decoration: line-through;
+  text-decoration-color: var(--orange);
+  text-decoration-thickness: 2px;
+}
+
+.realidad .tag { background: var(--orange-soft); color: var(--orange); }
+
+
+/* ============================================
+   VIDEO FACADE (/fuerza)
+   No YouTube load until play is tapped — the iframe
+   is injected on click and must stay youtube-nocookie.
+   ============================================ */
+
+.video {
+  position: relative;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  aspect-ratio: 16/9;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.video img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: .85; }
+
+.video .play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video .play span {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(255, 111, 13, 0.4);
+}
+
+.video .play svg { width: 26px; height: 26px; fill: var(--dark); margin-left: 4px; }
+
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+.video-caption { font-size: .82rem; color: var(--text-dim); margin-top: 10px; }
+.video-caption a { color: var(--orange); text-decoration: none; }
+
+
+/* ============================================
+   CALCULATOR (/proteina)
+   ============================================ */
+
+.calc {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 24px;
+}
+
+.calc label { display: block; font-size: .85rem; color: var(--text-dim); margin-bottom: 8px; }
+
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
+input[type=number] {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  color: var(--bone);
+  font-family: var(--font);
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 12px 14px;
+  width: 130px;
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+input:focus { outline: 2px solid var(--orange); border-color: var(--orange); }
+
+.unit { color: var(--text-dim); font-weight: 500; }
+
+.result { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line); }
+
+.result .big {
+  font-size: clamp(2.2rem, 9vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--orange);
+  line-height: 1;
+}
+
+.result .big small { font-size: .42em; color: var(--text-dim); font-weight: 500; letter-spacing: 0; }
+
+.result p { color: var(--text-dim); font-size: .88rem; margin-top: 10px; }
+
+.equiv { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+
+.equiv div {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 12px 14px;
+  font-size: .85rem;
+  color: var(--text-dim);
+}
+
+.equiv div strong { display: block; color: var(--bone); font-size: 1.05rem; }
+
+.note { font-size: .8rem; color: var(--text-dim); margin-top: 14px; }
+
+
+/* ============================================
+   STEPS (/recuperacion)
+   ============================================ */
+
+.steps { counter-reset: paso; }
+
+.step {
+  display: flex;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 18px 20px;
+  margin-bottom: 10px;
+}
+
+.step::before {
+  counter-increment: paso;
+  content: counter(paso);
+  flex: 0 0 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--orange-soft);
+  color: var(--orange);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .95rem;
+}
+
+.step div { font-size: .95rem; color: var(--text-dim); }
+.step div strong { color: var(--bone); display: block; margin-bottom: 2px; }
+
+
+/* ============================================
+   RESOURCE LINKS
+   ============================================ */
+
+.links a {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  color: var(--bone);
+  text-decoration: none;
+  font-size: .95rem;
+  transition: border-color .15s;
+}
+
+.links a:hover, .links a:focus-visible { border-color: var(--orange); }
+
+.links a small { display: block; color: var(--text-dim); font-size: .8rem; margin-top: 2px; }
+
+
+/* ============================================
+   STATION TIE-IN
+   ============================================ */
+
+.tiein {
+  background: linear-gradient(135deg, var(--orange-soft), transparent 60%), var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 22px;
+}
+
+.tiein h2 { color: var(--orange); margin-bottom: 8px; }
+.tiein p { color: var(--text-dim); font-size: .95rem; }
+.tiein p strong { color: var(--bone); }
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+  border-top: 1px solid var(--line);
+  margin-top: 24px;
+  padding: 26px 0 44px;
+  font-size: .78rem;
+  color: var(--text-dim);
+}
+
+footer a { color: var(--text-dim); }
+
+.disclaimer { margin-bottom: 14px; }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="description" content="Entrenar fuerza no te va a poner grande. Lo que dice la ciencia sobre el entrenamiento de fuerza en mujeres. Real Zero en Orangetheory Fitness Velázquez.">
+  <title>La fuerza no te pone grande · Real Zero</title>
+
+  <link rel="preload" href="/fonts/PPRightGrotesk-Dark.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/PPRightGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/qr-landing.css">
+  <link rel="icon" href="/assets/orangetheory_splat.png" type="image/png">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="eyebrow">Temporada de fuerza</span>
+    <p class="brand">Real Zero · Orangetheory Fitness Velázquez</p>
+  </header>
+
+  <div class="hero">
+    <h1>La fuerza <span class="tachado">te pone grande</span><br>te pone fuerte.</h1>
+    <p class="lede">Es el mito que más mujeres aleja de las pesas. La evidencia científica dice justo lo contrario: entrenar fuerza define, protege tus huesos y acelera la pérdida de grasa.</p>
+  </div>
+
+  <section aria-label="Mitos y realidades">
+    <div class="card mito">
+      <span class="tag">Mito</span>
+      <p>Si levanto peso me voy a ver masculina o voluminosa.</p>
+    </div>
+    <div class="card realidad">
+      <span class="tag">Realidad</span>
+      <p>Las mujeres producen mucha menos testosterona que los hombres. Ganar un volumen muscular grande requiere <strong>años de entrenamiento y alimentación muy específicos</strong>. Lo que consigues con la fuerza es firmeza, definición y un cuerpo más funcional.</p>
+    </div>
+    <div class="card mito">
+      <span class="tag">Mito</span>
+      <p>Para perder grasa lo mejor es hacer solo cardio.</p>
+    </div>
+    <div class="card realidad">
+      <span class="tag">Realidad</span>
+      <p>El músculo es tejido metabólicamente activo: <strong>quemas más incluso en reposo</strong>. En un déficit calórico, entrenar fuerza es lo que protege tu masa muscular para que lo que pierdas sea grasa, no músculo.</p>
+    </div>
+    <div class="card realidad">
+      <span class="tag">Bonus</span>
+      <p>El entrenamiento de fuerza es de las mejores herramientas contra la <strong>osteoporosis</strong>, especialmente relevante para mujeres a partir de los 40.</p>
+    </div>
+  </section>
+
+  <section aria-label="Video recomendado">
+    <h2>Míralo explicado con ciencia, no con humo</h2>
+    <div class="video" id="yt-facade" role="button" tabindex="0" aria-label="Reproducir video: 9 Mentiras del Fitness que las Mujeres Siguen Creyendo">
+      <img src="https://img.youtube.com/vi/MGJbyd3wqmI/hqdefault.jpg" alt="Lucía Aguado: 9 Mentiras del Fitness que las Mujeres Siguen Creyendo" loading="lazy">
+      <div class="play"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+    </div>
+    <p class="video-caption">Lucía Aguado, licenciada en Ciencias del Deporte y campeona mundial de culturismo natural: <a href="https://www.youtube.com/watch?v=MGJbyd3wqmI" target="_blank" rel="noopener">9 Mentiras del Fitness que las Mujeres Siguen Creyendo</a>. El video carga solo si pulsas play.</p>
+  </section>
+
+  <section aria-label="Más recursos" class="links">
+    <h2>Para profundizar</h2>
+    <a href="https://www.fitnessrevolucionario.com/en-femenino/" target="_blank" rel="noopener">
+      Fitness Revolucionario · En Femenino
+      <small>Marcos Vázquez. Entrenamiento y nutrición para la mujer, con estudios citados.</small>
+    </a>
+  </section>
+
+  <section>
+    <div class="tiein">
+      <h2>Después de tu clase</h2>
+      <p>El músculo se construye entrenando y se mantiene comiendo suficiente proteína. Tu estación Real Zero está a la salida: <strong>batidos de 25 g de proteína, listos en un minuto</strong>. Fuel the afterburn.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p class="disclaimer">Contenido informativo de carácter general. No sustituye el consejo de un médico o dietista-nutricionista. Los videos y artículos enlazados pertenecen a sus autores.</p>
+    <p>Real Zero S.L. · NIF B-24961658 · Estación RZ-VELAZQUEZ-01 · <a href="/velazquez">Guía, alérgenos y soporte</a></p>
+  </footer>
+
+</div>
+<script>
+(function(){
+  var f=document.getElementById('yt-facade');
+  function load(){
+    var i=document.createElement('iframe');
+    i.src='https://www.youtube-nocookie.com/embed/MGJbyd3wqmI?autoplay=1&rel=0';
+    i.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    i.allowFullscreen=true;
+    i.title='9 Mentiras del Fitness que las Mujeres Siguen Creyendo';
+    f.innerHTML='';f.appendChild(i);f.style.cursor='default';
+  }
+  f.addEventListener('click',load);
+  f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();load();}});
+})();
+</script>
+</body>
+</html>

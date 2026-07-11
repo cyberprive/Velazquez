@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="description" content="Cuánta proteína necesitas si entrenas fuerza y quieres perder grasa. Calculadora y fuentes con evidencia. Real Zero en Orangetheory Fitness Velázquez.">
+  <title>Cuánta proteína necesitas · Real Zero</title>
+
+  <link rel="preload" href="/fonts/PPRightGrotesk-Dark.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/PPRightGrotesk-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/qr-landing.css">
+  <link rel="icon" href="/assets/orangetheory_splat.png" type="image/png">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="eyebrow">Temporada de fuerza</span>
+    <p class="brand">Real Zero · Orangetheory Fitness Velázquez</p>
+  </header>
+
+  <div class="hero">
+    <h1>Cuánta proteína necesitas <em>de verdad</em></h1>
+    <p class="lede">Sin fórmulas mágicas. Si entrenas fuerza y tu objetivo es perder grasa manteniendo (o ganando) músculo, la investigación apunta a un rango de <strong>1,6 a 2,2 gramos por kilo de peso al día</strong>. Calcula el tuyo.</p>
+  </div>
+
+  <section aria-label="Calculadora de proteína">
+    <div class="calc">
+      <label for="peso">Tu peso corporal</label>
+      <div class="row">
+        <input type="number" id="peso" inputmode="decimal" min="35" max="200" value="65" aria-describedby="rango">
+        <span class="unit">kg</span>
+      </div>
+      <div class="result" aria-live="polite">
+        <div class="big"><span id="gmin">104</span>&#8211;<span id="gmax">143</span> <small>g de proteína al día</small></div>
+        <p id="rango">Reparte esa cantidad entre 3 y 5 comidas, unos <span id="pormeal">26</span> g por comida como referencia.</p>
+        <div class="equiv">
+          <div><strong>100 g pechuga de pollo</strong>30 g de proteína</div>
+          <div><strong>4 claras de huevo</strong>15 g de proteína</div>
+          <div><strong>1 taza yogur griego</strong>17 g de proteína</div>
+          <div><strong>1 batido Real Zero</strong>25 g de proteína</div>
+        </div>
+        <p class="note">Rango orientativo basado en consensos de nutrición deportiva para personas que entrenan fuerza. Personas sedentarias: la referencia general baja a 0,8 g/kg. Si tienes una condición médica, embarazo o lactancia, consulta con un profesional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Por qué importa">
+    <h2>Por qué la proteína manda cuando quieres perder grasa</h2>
+    <div class="card">
+      <p><strong>Es el macronutriente más saciante.</strong> Comer suficiente proteína reduce el hambre y hace el déficit calórico mucho más llevadero.</p>
+    </div>
+    <div class="card">
+      <p><strong>Protege tu músculo en déficit.</strong> Perder peso sin suficiente proteína ni fuerza significa perder músculo. El objetivo no es pesar menos, es cambiar tu composición corporal.</p>
+    </div>
+    <div class="card">
+      <p><strong>Cuesta más calorías digerirla.</strong> El efecto térmico de la proteína es mayor que el de grasas y carbohidratos.</p>
+    </div>
+  </section>
+
+  <section aria-label="Fuentes recomendadas" class="links">
+    <h2>Fuentes en español, sin bro science</h2>
+    <a href="https://saschafitness.com/blogs/tips/cuanta-proteina-debo-comer" target="_blank" rel="noopener">
+      Sascha Fitness · Cuánta proteína debo comer
+      <small>Sascha Barboza. La misma marca del batido Premium Refuel de tu estación.</small>
+    </a>
+    <a href="https://www.fitnessrevolucionario.com/en-femenino/" target="_blank" rel="noopener">
+      Fitness Revolucionario · En Femenino
+      <small>Marcos Vázquez. Incluye episodios sobre nutrición en la mujer con Sergio Espinar.</small>
+    </a>
+    <!-- SLOT OPCIONAL: pega aquí un embed de video cuando elijas uno concreto.
+         Usa https://www.youtube-nocookie.com/embed/VIDEO_ID para no cargar cookies. -->
+  </section>
+
+  <section>
+    <div class="tiein">
+      <h2>Tu atajo de 25 g</h2>
+      <p>Llegar a tu número diario con comida real es la base. El batido es el atajo cómodo para el hueco después de clase: <strong>Premium Refuel lleva Sascha Fitness Isolate, 25 g de proteína</strong>, sin azúcar y sin grasa. En tu estación Real Zero, a la salida.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p class="disclaimer">Contenido informativo de carácter general. No sustituye el consejo de un médico o dietista-nutricionista. Los artículos enlazados pertenecen a sus autores.</p>
+    <p>Real Zero S.L. · NIF B-24961658 · Estación RZ-VELAZQUEZ-01 · <a href="/velazquez">Guía, alérgenos y soporte</a></p>
+  </footer>
+
+</div>
+<script>
+(function(){
+  var peso=document.getElementById('peso'),
+      gmin=document.getElementById('gmin'),
+      gmax=document.getElementById('gmax'),
+      pm=document.getElementById('pormeal');
+  function calc(){
+    var kg=parseFloat(peso.value);
+    if(!kg||kg<35||kg>200){gmin.textContent='--';gmax.textContent='--';pm.textContent='--';return;}
+    var lo=Math.round(kg*1.6),hi=Math.round(kg*2.2);
+    gmin.textContent=lo;gmax.textContent=hi;
+    pm.textContent=Math.round(kg*0.4);
+  }
+  peso.addEventListener('input',calc);calc();
+})();
+</script>
+</body>
+</html>

@@ -166,6 +166,26 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- QR landing pages — Estación RZ-VELAZQUEZ-01 (Temporada de fuerza, ES only) -->
+  <url>
+    <loc>https://realzero.es/fuerza</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realzero.es/proteina</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://realzero.es/recuperacion</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <!-- Legal notice / Aviso legal -->
   <url>
     <loc>https://realzero.es/legal/aviso-legal</loc>
