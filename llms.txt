@@ -57,9 +57,9 @@
 ## Member-facing support (Orangetheory Velázquez installation)
 
 - [Member support · station RZ-VELAZQUEZ-01](https://realzero.es/velazquez): QR-landing for members at the launch-partner station. Guía de uso, sugerencias, soporte WhatsApp, alérgenos por producto, información legal.
-- [Temporada de fuerza · La fuerza no te pone grande](https://realzero.es/fuerza): QR-landing educativa — mitos y realidades del entrenamiento de fuerza en mujeres, con video (carga solo al pulsar play, sin cookies de terceros).
-- [Temporada de fuerza · Cuánta proteína necesitas](https://realzero.es/proteina): QR-landing con calculadora de proteína diaria (1,6–2,2 g/kg) y fuentes con evidencia.
-- [Temporada de fuerza · El batido después de clase](https://realzero.es/recuperacion): QR-landing sobre la ventana anabólica y el papel real del batido post-entreno.
+- [Season of Strength · La fuerza no te pone grande](https://realzero.es/fuerza): QR-landing educativa — mitos y realidades del entrenamiento de fuerza en mujeres, con video (carga solo al pulsar play, sin cookies de terceros).
+- [Season of Strength · Cuánta proteína necesitas](https://realzero.es/proteina): QR-landing con calculadora de proteína diaria (1,6–2,2 g/kg) y fuentes con evidencia.
+- [Season of Strength · El batido después de clase](https://realzero.es/recuperacion): QR-landing sobre la ventana anabólica y el papel real del batido post-entreno.
 
 ## Brand voice
 
