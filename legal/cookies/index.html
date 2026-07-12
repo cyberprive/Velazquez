@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="es" data-alt="/en/legal/cookies/">
 <head>
+
+  <!-- Google tag (gtag.js) — Consent Mode v2 default-denied (EEA compliant) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZR3F9FQWZT"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-ZR3F9FQWZT');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#111318">
@@ -51,7 +69,7 @@
       <p>Una cookie es un pequeño fichero que un sitio web descarga en tu dispositivo (ordenador, móvil, tablet) cuando lo visitas. Se utilizan habitualmente para recordar preferencias, medir el uso del sitio o personalizar contenidos.</p>
 
       <h2>2. Cookies que utiliza esta web</h2>
-      <p>Esta web ha sido diseñada bajo el principio de <strong>minimización de datos</strong>. No utilizamos cookies de publicidad, ni cookies de seguimiento entre sitios, ni cookies de redes sociales. Por tanto, <strong>no mostramos banner de consentimiento de cookies</strong>, ya que no tratamos datos personales a través de cookies no esenciales.</p>
+      <p>Esta web ha sido diseñada bajo el principio de <strong>minimización de datos</strong>. No utilizamos cookies de publicidad de terceros, ni cookies de redes sociales, ni cookies de seguimiento cross-site con perfilado.</p>
 
       <h3>Cookies técnicas (exentas de consentimiento)</h3>
       <p>Podemos utilizar cookies estrictamente necesarias para el funcionamiento del servicio. Estas cookies están exentas del deber de informar y obtener consentimiento según el Art. 22.2 de la LSSI-CE y las Directrices de la AEPD:</p>
@@ -71,8 +89,28 @@
       <p class="legal-note"><em>Nota: <code>rz-lang-seen</code> técnicamente es un valor de sessionStorage (no una cookie HTTP), pero lo declaramos aquí por transparencia.</em></p>
 
       <h2>3. Analítica</h2>
-      <p>Para entender el uso agregado de la web (páginas más visitadas, origen del tráfico, dispositivos) podemos utilizar una herramienta de analítica respetuosa con la privacidad que <strong>no utiliza cookies</strong> ni identifica a usuarios individuales (por ejemplo, Vercel Analytics en modo sin cookies o Plausible Analytics).</p>
-      <p>Estas herramientas procesan exclusivamente datos agregados y anonimizados, por lo que no requieren consentimiento según las Directrices del Comité Europeo de Protección de Datos (EDPB) ni de la AEPD.</p>
+      <p>Utilizamos dos herramientas de analítica para entender el uso agregado de la web (páginas más visitadas, origen del tráfico, dispositivos):</p>
+      <table>
+        <thead>
+          <tr><th>Herramienta</th><th>Proveedor</th><th>Modo</th><th>Cookies</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Vercel Web Analytics</strong></td>
+            <td>Vercel Inc.</td>
+            <td>Métricas agregadas sin cookies</td>
+            <td>Ninguna</td>
+          </tr>
+          <tr>
+            <td><strong>Google Analytics 4</strong></td>
+            <td>Google LLC</td>
+            <td><strong>Consent Mode v2 con <em>default denied</em></strong>: hasta que el usuario otorgue consentimiento expreso, Google Analytics opera en modo sin cookies («cookieless pings») y no almacena identificadores en tu dispositivo. Solo se envían señales agregadas y anonimizadas.</td>
+            <td>Ninguna sin consentimiento; <code>_ga</code>, <code>_ga_&lt;ID&gt;</code> (hasta 2 años) si se otorga</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Mientras Google Analytics opera en modo <em>default denied</em>, el tratamiento se limita a datos agregados sin identificación de usuarios individuales y, conforme a las Directrices del Comité Europeo de Protección de Datos (EDPB) y a la interpretación mayoritaria de la AEPD, no requiere consentimiento previo. Si en el futuro Real Zero decide activar cookies de Google Analytics con identificación de usuario, se implementará un banner de consentimiento y esta política se actualizará en consecuencia.</p>
+      <p>Puedes ejercer una <strong>oposición general al seguimiento por Google Analytics</strong> instalando <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">el complemento oficial de inhabilitación de Google</a>.</p>
 
       <h2>4. Cookies de terceros</h2>
       <p>Cuando pulsas un enlace a un servicio externo (WhatsApp, Instagram, LinkedIn, correo electrónico), abandonas esta web y pasas a la plataforma del tercero, cuyas políticas de cookies y privacidad son responsabilidad de cada operador. Te recomendamos revisarlas directamente:</p>

@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="es" data-alt="/privacy/">
 <head>
+
+  <!-- Google tag (gtag.js) — Consent Mode v2 default-denied (EEA compliant) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZR3F9FQWZT"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-ZR3F9FQWZT');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#111318">
@@ -135,9 +153,15 @@
           </tr>
           <tr>
             <td><strong>Vercel Inc.</strong></td>
-            <td>Alojamiento de la web pública</td>
+            <td>Alojamiento de la web pública y Vercel Web Analytics (sin cookies)</td>
             <td>Encargado del tratamiento</td>
             <td>EE.UU. (SCCs). <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Política de Vercel</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google LLC</strong> (Google Analytics 4)</td>
+            <td>Analítica de audiencia web — desplegado bajo Consent Mode v2 con <em>default denied</em>. Opera sin cookies hasta que el usuario otorgue consentimiento.</td>
+            <td>Encargado del tratamiento</td>
+            <td>EE.UU. (SCCs). <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Google</a></td>
           </tr>
           <tr>
             <td><strong>Cloudflare Inc.</strong></td>

@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" data-alt="/legal/cookies/">
 <head>
+
+  <!-- Google tag (gtag.js) — Consent Mode v2 default-denied (EEA compliant) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZR3F9FQWZT"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-ZR3F9FQWZT');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#111318">
@@ -46,7 +64,7 @@
       <p>A cookie is a small file that a website downloads onto your device (computer, phone, tablet) when you visit. They are commonly used to remember preferences, measure site usage or personalise content.</p>
 
       <h2>2. Cookies on this site</h2>
-      <p>This site has been designed around the principle of <strong>data minimisation</strong>. We do not use advertising cookies, cross-site tracking cookies or social-network cookies. Therefore, <strong>we do not display a cookie consent banner</strong>, since we do not process personal data through non-essential cookies.</p>
+      <p>This site has been designed around the principle of <strong>data minimisation</strong>. We do not use third-party advertising cookies, social-network cookies, or cross-site tracking cookies with profiling.</p>
 
       <h3>Technical cookies (exempt from consent)</h3>
       <p>We may use strictly necessary cookies for the service to function. These are exempt from the duty to inform and obtain consent under Art. 22.2 of the Spanish LSSI-CE and the AEPD guidelines:</p>
@@ -64,8 +82,28 @@
       <p><em>Note: <code>rz-lang-seen</code> is technically a sessionStorage value (not an HTTP cookie), but we declare it here for transparency.</em></p>
 
       <h2>3. Analytics</h2>
-      <p>To understand aggregate site usage (most-visited pages, traffic source, devices) we may use a privacy-respecting analytics tool that <strong>does not use cookies</strong> and does not identify individual users (for example, Vercel Analytics in cookieless mode or Plausible Analytics).</p>
-      <p>These tools process exclusively aggregated and anonymised data and therefore do not require consent under the European Data Protection Board (EDPB) or AEPD guidelines.</p>
+      <p>We use two analytics tools to understand aggregate site usage (most-visited pages, traffic source, devices):</p>
+      <table>
+        <thead>
+          <tr><th>Tool</th><th>Provider</th><th>Mode</th><th>Cookies</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Vercel Web Analytics</strong></td>
+            <td>Vercel Inc.</td>
+            <td>Aggregate metrics, cookieless</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td><strong>Google Analytics 4</strong></td>
+            <td>Google LLC</td>
+            <td><strong>Consent Mode v2 with <em>default denied</em></strong>: until the user grants explicit consent, Google Analytics runs in cookieless mode ("cookieless pings") and stores no identifiers on your device. Only aggregated, anonymised signals are sent.</td>
+            <td>None without consent; <code>_ga</code>, <code>_ga_&lt;ID&gt;</code> (up to 2 years) if granted</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>While Google Analytics operates in <em>default denied</em> mode, processing is limited to aggregate data without user-level identification and, in line with the European Data Protection Board (EDPB) guidelines and the majority reading of the Spanish AEPD, does not require prior consent. If Real Zero later decides to activate Google Analytics cookies with user-level identification, a consent banner will be implemented and this policy updated accordingly.</p>
+      <p>You can exercise a <strong>general opt-out from Google Analytics tracking</strong> by installing <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google's official opt-out browser add-on</a>.</p>
 
       <h2>4. Third-party cookies</h2>
       <p>When you click a link to an external service (WhatsApp, Instagram, LinkedIn, email), you leave this site and enter the third-party platform, whose cookie and privacy policies are that operator's responsibility. We recommend you review them directly:</p>
