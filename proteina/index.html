@@ -2,16 +2,25 @@
 <html lang="es">
 <head>
 
-  <!-- Google tag (gtag.js) — Consent Mode v2 default-denied (EEA compliant) -->
+  <!-- Google tag (gtag.js) — Consent Mode v2 with region-scoped defaults -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    // EEA + UK + Switzerland: default DENIED until (future) banner grants
     gtag('consent', 'default', {
       ad_storage: 'denied',
       ad_user_data: 'denied',
       ad_personalization: 'denied',
       analytics_storage: 'denied',
-      wait_for_update: 500
+      wait_for_update: 500,
+      region: ['ES','FR','DE','IT','PT','NL','BE','LU','IE','AT','FI','DK','SE','GR','PL','CZ','HU','RO','BG','SK','SI','HR','LT','LV','EE','MT','CY','IS','LI','NO','GB','CH']
+    });
+    // Rest of the world: default GRANTED (full tracking, no consent required)
+    gtag('consent', 'default', {
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      analytics_storage: 'granted'
     });
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZR3F9FQWZT"></script>
