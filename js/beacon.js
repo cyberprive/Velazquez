@@ -16,15 +16,22 @@
  * server stores null in that case. No personal data, no IP (server keeps only
  * CF-IPCountry). Deduped per session so a refresh doesn't re-fire.
  *
- * Config: set the station on the page with
- *   <body data-rz-station="RZ-VELAZQUEZ-01">
- * Falls back to RZ-VELAZQUEZ-01 (the only current install).
+ * Config (both on <body>):
+ *   data-rz-station  the station id            (default RZ-VELAZQUEZ-01)
+ *   data-rz-beacon   the receiver endpoint URL (default the GS805 webhook)
+ *
+ * The default sink is the GS805 fulfilment webhook (`/scan/beacon`), which
+ * works on the light version with no realOS cloud. On the full realOS-kiosk
+ * version, point data-rz-beacon at https://cloud.realzero.es/api/scan/beacon
+ * instead — both write to the same web_scans table the resolver reads.
  */
 (function () {
   "use strict";
 
-  var ENDPOINT = "https://cloud.realzero.es/api/scan/beacon";
   var GA4_ID = "G-ZR3F9FQWZT";
+  var ENDPOINT =
+    (document.body && document.body.getAttribute("data-rz-beacon")) ||
+    "https://gs805-webhook.onrender.com/scan/beacon";
   var station =
     (document.body && document.body.getAttribute("data-rz-station")) ||
     "RZ-VELAZQUEZ-01";
