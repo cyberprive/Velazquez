@@ -3,9 +3,6 @@
 
 User-agent: *
 Allow: /
-Disallow: /caso-otf-velazquez
-Disallow: /en/case-otf-velazquez
-Disallow: /en/legal/privacy
 
 # AI crawlers — explicit allow with pointer to /llms.txt
 User-agent: GPTBot

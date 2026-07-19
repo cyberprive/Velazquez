@@ -25,6 +25,7 @@
     }
   ],
   "redirects": [
-    { "source": "/velazquez/index.html", "destination": "/velazquez", "permanent": true }
+    { "source": "/velazquez/index.html", "destination": "/velazquez", "permanent": true },
+    { "source": "/en/legal/privacy", "destination": "/privacy", "permanent": true }
   ]
 }

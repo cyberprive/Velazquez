@@ -166,6 +166,24 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- Case study — OTF Velázquez launch -->
+  <url>
+    <loc>https://realzero.es/caso-otf-velazquez</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://realzero.es/caso-otf-velazquez"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://realzero.es/en/case-otf-velazquez"/>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://realzero.es/en/case-otf-velazquez</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://realzero.es/caso-otf-velazquez"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://realzero.es/en/case-otf-velazquez"/>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <!-- QR landing pages — Estación RZ-VELAZQUEZ-01 (Season of Strength, ES only) -->
   <url>
     <loc>https://realzero.es/fuerza</loc>
