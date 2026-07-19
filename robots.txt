@@ -4,26 +4,36 @@
 User-agent: *
 Allow: /
 
-# AI crawlers — explicit allow with pointer to /llms.txt
+# AI crawlers — allowed site-wide (pointer to /llms.txt), EXCEPT the machine QR
+# landing page /velazquez (WhatsApp + flavour lineup — keep out of AI answers).
+# Googlebot (User-agent: *) is deliberately NOT blocked here so it can still
+# crawl /velazquez and honour its noindex meta.
 User-agent: GPTBot
 Allow: /
+Disallow: /velazquez
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /velazquez
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /velazquez
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /velazquez
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /velazquez
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /velazquez
 
 User-agent: CCBot
 Allow: /
+Disallow: /velazquez
 
 Sitemap: https://realzero.es/sitemap.xml
