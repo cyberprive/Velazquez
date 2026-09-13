@@ -1,0 +1,21 @@
+name: contact-guard
+
+# Fails the build if a retired Real Zero phone number is still published
+# anywhere in the site. After a number swap this is the net that catches
+# the one footer nobody rechecked.
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  contact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check published contact numbers
+        run: node scripts/contact.mjs

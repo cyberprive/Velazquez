@@ -1,7 +1,9 @@
 /* ============================================
    CONFIGURATION
-   Edit these values to update WhatsApp number
-   or form endpoints.
+   Do NOT hand-edit the phone number here: it is
+   generated from /contact.config.json by
+   scripts/contact.mjs --write (CI enforces it).
+   Form endpoints are safe to edit directly.
    ============================================ */
 
 const CONFIG = {
