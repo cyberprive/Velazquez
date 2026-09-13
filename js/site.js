@@ -1,5 +1,8 @@
 /* ============================================
    CONFIG
+   Do NOT hand-edit the phone number here: it is
+   generated from /contact.config.json by
+   scripts/contact.mjs --write (CI enforces it).
    ============================================ */
 
 const CONFIG = {

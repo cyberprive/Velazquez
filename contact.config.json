@@ -1,0 +1,11 @@
+{
+  "_readme": "Single source of truth for Real Zero public contact numbers. Edit ONLY this file, then run: node scripts/contact.mjs --write",
+  "phone": {
+    "current": {
+      "e164": "+34623345790",
+      "role": "Public support and sales line (WhatsApp Business + voice)"
+    },
+    "retired": []
+  },
+  "_retired_note": "When you swap numbers: move the old e164 string into phone.retired, set the new one as current, run --write, commit. CI then fails forever if a retired number reappears anywhere."
+}
