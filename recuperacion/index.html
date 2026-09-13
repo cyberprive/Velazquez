@@ -2,32 +2,14 @@
 <html lang="es">
 <head>
 
-  <!-- Google tag (gtag.js) — Consent Mode v2 with region-scoped defaults -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    // EEA + UK + Switzerland: default DENIED until (future) banner grants
-    gtag('consent', 'default', {
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      analytics_storage: 'denied',
-      wait_for_update: 500,
-      region: ['ES','FR','DE','IT','PT','NL','BE','LU','IE','AT','FI','DK','SE','GR','PL','CZ','HU','RO','BG','SK','SI','HR','LT','LV','EE','MT','CY','IS','LI','NO','GB','CH']
-    });
-    // Rest of the world: default GRANTED (full tracking, no consent required)
-    gtag('consent', 'default', {
-      ad_storage: 'granted',
-      ad_user_data: 'granted',
-      ad_personalization: 'granted',
-      analytics_storage: 'granted'
-    });
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZR3F9FQWZT"></script>
-  <script>
-    gtag('js', new Date());
-    gtag('config', 'G-ZR3F9FQWZT');
-  </script>
+  <!-- No Google Analytics on this in-store QR page, by design.
+       GA4 here would sit permanently at analytics_storage: 'denied' for the
+       Spanish members who actually scan this code, and the only way to grant
+       it is a consent banner. A cookie overlay on the page someone opens while
+       standing at the machine costs us the support interaction and buys no
+       usable data. Measurement comes from Vercel Web Analytics (cookieless)
+       and /js/beacon.js instead. Do not re-add gtag here without also
+       implementing consent and updating /legal/cookies. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#0A0A0A">
