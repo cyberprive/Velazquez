@@ -1,0 +1,20 @@
+name: html-guard
+
+# Keeps <meta charset> inside the first 1024 bytes on every page, so a large
+# inline script pasted at the top of <head> cannot silently break encoding.
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  head:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check <meta charset> position
+        run: node scripts/check-head.mjs
