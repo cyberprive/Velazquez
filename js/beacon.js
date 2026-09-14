@@ -39,7 +39,13 @@
   var station =
     (document.body && document.body.getAttribute("data-rz-station")) ||
     "RZ-VELAZQUEZ-01";
-  var page = location.pathname.replace(/\/index\.html$/, "") || "/";
+  // Normalise to one spelling per page. Vercel serves /velazquez with
+  // cleanUrls and trailingSlash: false, but a directory-style /velazquez/ or
+  // an explicit /velazquez/index.html both reach the same page, and reporting
+  // three spellings would split the same station in web_scans. Strip
+  // /index.html first, then any trailing slash, keeping "/" for the root.
+  var page =
+    location.pathname.replace(/\/index\.html$/, "").replace(/\/+$/, "") || "/";
 
   /* Count only a genuine fresh visit.
    *
