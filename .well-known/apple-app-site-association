@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["39VLCV4B2H.es.realzero.app"],
+        "components": [
+          {
+            "/": "/app/auth/callback",
+            "comment": "the Real Zero app's owner sign-in coming back from Cloudflare Access"
+          }
+        ]
+      }
+    ]
+  }
+}
