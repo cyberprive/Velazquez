@@ -1,8 +1,15 @@
 {
+  "webcredentials": {
+    "apps": [
+      "39VLCV4B2H.es.realzero.app"
+    ]
+  },
   "applinks": {
     "details": [
       {
-        "appIDs": ["39VLCV4B2H.es.realzero.app"],
+        "appIDs": [
+          "39VLCV4B2H.es.realzero.app"
+        ],
         "components": [
           {
             "/": "/app/auth/callback",
