@@ -1,13 +1,45 @@
 /* ============================================
    Real Zero — Main brand site
-   Typography: Space Grotesk (headlines) + Inter (body).
-   The wordmark is Barlow Condensed ExtraBold, shipped outlined in /assets.
+   Typography: PP Right Grotesk (self-hosted) for everything but the wordmark,
+   which is Barlow Condensed ExtraBold, shipped outlined in /assets.
    Colours: the Real Zero identity kit (approved 2026-10-08) —
    Ink / White / Dark Blue (the only accent) on Paper.
    Orange belongs to Orangetheory — never a Real Zero accent.
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+/* PP Right Grotesk — self-hosted in /fonts/, ships 300/400/500/800 only:
+   body 400, emphasis and labels 500, headings 800. No third-party font loads. */
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('/fonts/PPRightGrotesk-Dark.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('/fonts/PPRightGrotesk-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('/fonts/PPRightGrotesk-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('/fonts/PPRightGrotesk-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
 
 /* ============================================
@@ -29,8 +61,8 @@
   --hairline-strong: #B9BDC2;
   --blue-soft:  rgba(29, 45, 61, 0.08);
 
-  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'PP Right Grotesk', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  --font-body:    'PP Right Grotesk', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
 
   --radius:    10px;
   --radius-lg: 16px;
@@ -97,16 +129,16 @@ ul, ol { list-style: none; }
 
 h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--text);
 }
 
-.h1 { font-size: clamp(42px, 7vw, 80px); line-height: 0.98; letter-spacing: -0.025em; font-weight: 700; }
-.h2 { font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -0.02em; font-weight: 600; }
-.h3 { font-size: clamp(22px, 2.5vw, 30px); letter-spacing: -0.015em; font-weight: 600; }
-.h4 { font-size: clamp(18px, 1.8vw, 22px); letter-spacing: -0.01em; font-weight: 600; }
+.h1 { font-size: clamp(42px, 7vw, 80px); line-height: 0.98; letter-spacing: -0.025em; font-weight: 800; }
+.h2 { font-size: clamp(32px, 4.5vw, 52px); letter-spacing: -0.02em; font-weight: 800; }
+.h3 { font-size: clamp(22px, 2.5vw, 30px); letter-spacing: -0.015em; font-weight: 800; }
+.h4 { font-size: clamp(18px, 1.8vw, 22px); letter-spacing: -0.01em; font-weight: 800; }
 
 .eyebrow {
   font-family: var(--font-body);
@@ -294,7 +326,7 @@ h1, h2, h3, h4, h5 {
   font-size: clamp(44px, 7.5vw, 92px);
   line-height: 0.98;
   letter-spacing: -0.03em;
-  font-weight: 700;
+  font-weight: 800;
   max-width: 16ch;
 }
 
@@ -397,7 +429,7 @@ h1, h2, h3, h4, h5 {
 .feature-card h3 {
   font-size: 22px;
   line-height: 1.15;
-  font-weight: 600;
+  font-weight: 800;
 }
 .feature-card p {
   font-size: 15px;
@@ -429,7 +461,7 @@ h1, h2, h3, h4, h5 {
   color: var(--blue);
   letter-spacing: 0.02em;
 }
-.step-title { font-size: 18px; font-weight: 600; line-height: 1.1; }
+.step-title { font-size: 18px; font-weight: 800; line-height: 1.1; }
 .step-body  { font-size: 14px; color: var(--text-dim); line-height: 1.5; }
 
 
@@ -488,7 +520,7 @@ h1, h2, h3, h4, h5 {
   padding-block: clamp(56px, 8vw, 112px);
   text-align: center;
 }
-.band h2 { font-size: clamp(34px, 5vw, 60px); color: var(--white); font-weight: 700; letter-spacing: -0.025em; }
+.band h2 { font-size: clamp(34px, 5vw, 60px); color: var(--white); font-weight: 800; letter-spacing: -0.025em; }
 .band p  { margin-top: 16px; color: rgba(255, 255, 255, 0.8); max-width: 58ch; margin-inline: auto; }
 .band .btn { margin-top: 32px; background: var(--white); color: var(--ink); }
 .band .btn:hover { background: var(--paper); color: var(--ink); }
@@ -544,7 +576,7 @@ h1, h2, h3, h4, h5 {
 .footer-brand {
   font-family: var(--font-display);
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text);
   letter-spacing: -0.01em;
   margin-bottom: 12px;
@@ -567,7 +599,7 @@ h1, h2, h3, h4, h5 {
 .footer h4 {
   font-family: var(--font-body);
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--text);
@@ -607,21 +639,21 @@ h1, h2, h3, h4, h5 {
 .legal h2 {
   font-family: var(--font-display);
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 800;
   color: var(--blue);
   margin-top: 36px;
   margin-bottom: 10px;
   letter-spacing: -0.01em;
 }
-.legal h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-top: 22px; margin-bottom: 8px; }
+.legal h3 { font-size: 16px; font-weight: 800; color: var(--text); margin-top: 22px; margin-bottom: 8px; }
 .legal p  { font-size: 15px; line-height: 1.65; color: var(--text-dim); margin-bottom: 12px; }
 .legal ul { padding-left: 20px; margin-bottom: 12px; }
 .legal ul li { list-style: disc; margin-bottom: 6px; color: var(--text-dim); line-height: 1.55; }
-.legal strong { color: var(--text); font-weight: 600; }
+.legal strong { color: var(--text); font-weight: 500; }
 .legal a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
 .legal table { width: 100%; border-collapse: collapse; margin-block: 20px; font-size: 14px; }
 .legal th, .legal td { padding: 12px 14px; border-bottom: 1px solid var(--hairline); text-align: left; vertical-align: top; }
-.legal th { color: var(--text); font-weight: 600; }
+.legal th { color: var(--text); font-weight: 500; }
 .legal td { color: var(--text-dim); }
 
 
@@ -638,7 +670,7 @@ h1, h2, h3, h4, h5 {
 .form-group { display: flex; flex-direction: column; gap: 6px; }
 .form-group label {
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text);

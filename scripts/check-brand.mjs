@@ -26,8 +26,9 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const SKIP_DIRS = new Set(['.git', 'node_modules', '.vercel', '.claude', 'fonts', 'testing', 'scripts', 'Context', 'Branding Guide']);
 const SCAN_EXTS = new Set(['.html', '.css', '.js', '.svg', '.json', '.xml', '.txt']);
 
-// The Word-set two-word block the kit replaced.
-const RETIRED_FILES = ['realzero-logo-dark.png', 'realzero-logo-light.png'];
+// The Word-set two-word block the kit replaced, and the Google Fonts call the
+// site made before every page set its type in self-hosted PP Right Grotesk.
+const RETIRED_FILES = ['realzero-logo-dark.png', 'realzero-logo-light.png', 'fonts.googleapis.com', 'fonts.gstatic.com'];
 
 // The site's own pre-kit palettes (Carbon / Soft White / Steel / Ice Blue on the
 // main site, Bone / Dark / surfaces on the QR pages) and Orangetheory's orange,
@@ -62,7 +63,7 @@ for await (const absolute of walk(ROOT)) {
   const text = readFileSync(absolute, 'utf8');
   checked++;
   for (const name of RETIRED_FILES) {
-    if (text.includes(name)) failures.push(`${file}: references retired logo ${name}`);
+    if (text.includes(name)) failures.push(`${file}: references retired resource ${name}`);
   }
   const lines = text.split('\n');
   lines.forEach((line, i) => {
