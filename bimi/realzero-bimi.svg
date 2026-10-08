@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 100 100">
+  <title>Real Zero</title>
+  <rect width="100" height="100" fill="#1D2D3D"/>
+  <path fill="#FFFFFF" fill-rule="evenodd" d="M50 21A29 29 0 1 1 50 79A29 29 0 1 1 50 21ZM50 26.8A23.2 23.2 0 1 0 50 73.2A23.2 23.2 0 1 0 50 26.8Z"/>
+</svg>
