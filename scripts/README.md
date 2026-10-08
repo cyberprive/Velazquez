@@ -37,16 +37,22 @@ reported as warnings, not failures, to keep the gate free of false positives.
 
 ## check-brand.mjs
 
-Since 2026-10-08 the site wears the Real Zero identity kit: Ink `#1E2226`,
-White, Dark Blue `#1D2D3D` as the only accent, on Paper `#F2F2F3`, with the
-outlined wordmark and the zero in `assets/`. The pre-kit palettes (the main
-site's Carbon / Ice Blue, the QR pages' Bone / Dark, Orangetheory's orange used
-as an accent) and the retired `realzero-logo-*.png` files must not come back.
+Since 2026-10-08 the brand site wears the Real Zero identity kit: Ink
+`#1E2226`, White, Dark Blue `#1D2D3D` as the only accent, on Paper `#F2F2F3`,
+with the outlined wordmark and the zero in `assets/`, and all copy in the
+self-hosted PP Right Grotesk. The main site's pre-kit palette (Carbon / Ice
+Blue), the retired `realzero-logo-*.png` files and any Google Fonts call must
+not come back anywhere.
+
+The in-studio pages are the deliberate exception: `/velazquez` and the QR
+landing pages `/fuerza`, `/proteina`, `/recuperacion` are Orangetheory
+co-branded surfaces that match the vinyl and the splat, so they keep OTF's
+Orange / Bone / Dark paint. Outside those files that palette is a retired
+accent and fails the build.
 
 ```bash
 node scripts/check-brand.mjs      # exits 1 on any retired colour or logo reference
 ```
 
-Orangetheory's own PNG assets (splat, line icons) are binary and not scanned;
-they are OTF's and keep their colours. CI runs this as
-`.github/workflows/brand-guard.yml`.
+Orangetheory's own PNG assets (splat, line icons) are binary and not scanned.
+CI runs this as `.github/workflows/brand-guard.yml`.
