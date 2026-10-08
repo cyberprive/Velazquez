@@ -40,16 +40,11 @@
    ============================================ */
 
 :root {
-  /* Real Zero identity kit (approved 2026-10-08) — three colours, no more.
-     Orangetheory's own assets (splat, line icons) keep their colours. */
-  --ink: #1E2226;
-  --white: #FFFFFF;
-  --blue: #1D2D3D;                 /* the only accent */
-  --blue-soft: rgba(29, 45, 61, 0.08);
-  --paper: #F2F2F3;
-  --muted: #5F6469;                /* Ink softened — 5.3:1 on Paper */
-  --line: #D7D9DB;
-  --vinyl: #0A0A0A;                /* the QR vinyl crop's own ground — intro overlay only */
+  --orange: #FF6F0D;
+  --bone: #FDF7EA;
+  --dark: #0A0A0A;
+  --gray: #D7D7D7;
+  --blue: #1DD0FD;
 
   --font: 'PP Right Grotesk', -apple-system, 'Helvetica Neue', Arial, sans-serif;
   --tracking: -0.02em;
@@ -79,8 +74,8 @@ body {
   font-family: var(--font);
   font-weight: 300;
   letter-spacing: var(--tracking);
-  background-color: var(--paper);
-  color: var(--ink);
+  background-color: var(--dark);
+  color: var(--bone);
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -134,7 +129,7 @@ ul, ol {
   position: fixed;
   inset: 0;
   z-index: 200;
-  background-color: var(--vinyl);
+  background-color: var(--dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,9 +247,8 @@ ul, ol {
 .card {
   width: 100%;
   height: clamp(72px, 12dvh, 96px);
-  background-color: var(--white);
-  color: var(--ink);
-  border: 1px solid var(--line);
+  background-color: var(--bone);
+  color: var(--dark);
   border-radius: var(--card-radius);
   display: flex;
   align-items: center;
@@ -308,7 +302,7 @@ ul, ol {
   font-weight: 300;
   font-size: clamp(11px, 1.6dvh, 13px);
   line-height: 1.1;
-  color: var(--muted);
+  opacity: 0.6;
   display: block;
   margin-top: 3px;
 }
@@ -351,13 +345,13 @@ ul, ol {
 .spark-line {
   width: 2px;
   flex: 1;
-  background-color: var(--blue);
+  background-color: var(--orange);
 }
 
 .spark-diamond {
   width: 8px;
   height: 8px;
-  background-color: var(--blue);
+  background-color: var(--orange);
   transform: rotate(45deg);
   flex-shrink: 0;
 }
@@ -374,11 +368,12 @@ ul, ol {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   opacity: 0;
-  color: var(--muted);
+  color: var(--bone);
+  opacity: 0.4;
 }
 
 .privacy-link.visible {
-  opacity: 1;
+  opacity: 0.4;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -393,7 +388,7 @@ ul, ol {
 
 @media (prefers-reduced-motion: reduce) {
   .privacy-link {
-    opacity: 1;
+    opacity: 0.4;
   }
 }
 
@@ -406,8 +401,8 @@ ul, ol {
   position: fixed;
   inset: 0;
   z-index: 100;
-  background-color: var(--paper);
-  color: var(--ink);
+  background-color: var(--dark);
+  color: var(--bone);
   transform: translateY(100%);
   visibility: hidden;
   overflow: hidden;
@@ -439,7 +434,7 @@ ul, ol {
   justify-content: space-between;
   padding: 16px 20px;
   flex-shrink: 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(253, 247, 234, 0.1);
 }
 
 .modal-title {
@@ -454,13 +449,13 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--ink);
+  color: var(--bone);
   border-radius: 50%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .modal-close:active {
-    background-color: rgba(30, 34, 38, 0.08);
+    background-color: rgba(253, 247, 234, 0.1);
   }
 }
 
@@ -482,7 +477,7 @@ ul, ol {
   line-height: 0.9;
   margin-top: 24px;
   margin-bottom: 8px;
-  color: var(--blue);
+  color: var(--orange);
 }
 
 .modal-body--legal h3:first-child {
@@ -507,7 +502,7 @@ ul, ol {
 
 .modal-body--legal strong {
   font-weight: 500;
-  color: var(--ink);
+  color: var(--bone);
 }
 
 .modal-intro {
@@ -538,8 +533,8 @@ ul, ol {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: var(--orange);
+  color: var(--dark);
   font-weight: 800;
   font-size: 15px;
   display: flex;
@@ -590,7 +585,7 @@ ul, ol {
 .optional {
   font-weight: 300;
   text-transform: none;
-  color: var(--muted);
+  opacity: 0.5;
 }
 
 .form-input,
@@ -602,9 +597,9 @@ ul, ol {
   letter-spacing: var(--tracking);
   padding: 12px 14px;
   border-radius: 8px;
-  border: 1.5px solid var(--line);
-  background-color: var(--white);
-  color: var(--ink);
+  border: 1.5px solid rgba(253, 247, 234, 0.2);
+  background-color: rgba(253, 247, 234, 0.05);
+  color: var(--bone);
   outline: none;
   width: 100%;
   appearance: none;
@@ -614,24 +609,24 @@ ul, ol {
 .form-input:focus,
 .form-textarea:focus,
 .form-select:focus {
-  border-color: var(--blue);
+  border-color: var(--orange);
 }
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-  color: var(--muted);
+  color: rgba(253, 247, 234, 0.3);
 }
 
 .form-select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231E2226' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23FDF7EA' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 36px;
 }
 
 .form-select option {
-  background-color: var(--white);
-  color: var(--ink);
+  background-color: var(--dark);
+  color: var(--bone);
 }
 
 .form-textarea {
@@ -646,8 +641,8 @@ ul, ol {
   letter-spacing: var(--tracking);
   padding: 14px 24px;
   border-radius: 8px;
-  background-color: var(--ink);
-  color: var(--white);
+  background-color: var(--orange);
+  color: var(--dark);
   border: none;
   cursor: pointer;
   text-align: center;
@@ -677,11 +672,11 @@ ul, ol {
 }
 
 .form-feedback.success {
-  color: #1B7A3E; /* 5.4:1 on White */
+  color: #079B4A;
 }
 
 .form-feedback.error {
-  color: #C62828; /* 5.6:1 on White */
+  color: #DD1F1F;
 }
 
 
@@ -697,8 +692,8 @@ ul, ol {
   width: 100%;
   padding: 16px 24px;
   border-radius: 8px;
-  background-color: var(--ink);
-  color: var(--white);
+  background-color: var(--orange);
+  color: var(--dark);
   font-weight: 800;
   font-size: 15px;
   letter-spacing: var(--tracking);
@@ -734,12 +729,12 @@ ul, ol {
 .separator-line {
   flex: 1;
   height: 1px;
-  background-color: var(--line);
+  background-color: rgba(253, 247, 234, 0.15);
 }
 
 .separator-text {
   font-size: 12px;
   font-weight: 400;
-  color: var(--muted);
+  opacity: 0.4;
   text-transform: lowercase;
 }
