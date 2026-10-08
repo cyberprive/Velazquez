@@ -34,3 +34,19 @@ number ever reappears, so a stale copy cannot be reintroduced by hand.
 
 Numbers found in the repo that are in neither `current` nor `retired` are
 reported as warnings, not failures, to keep the gate free of false positives.
+
+## check-brand.mjs
+
+Since 2026-10-08 the site wears the Real Zero identity kit: Ink `#1E2226`,
+White, Dark Blue `#1D2D3D` as the only accent, on Paper `#F2F2F3`, with the
+outlined wordmark and the zero in `assets/`. The pre-kit palettes (the main
+site's Carbon / Ice Blue, the QR pages' Bone / Dark, Orangetheory's orange used
+as an accent) and the retired `realzero-logo-*.png` files must not come back.
+
+```bash
+node scripts/check-brand.mjs      # exits 1 on any retired colour or logo reference
+```
+
+Orangetheory's own PNG assets (splat, line icons) are binary and not scanned;
+they are OTF's and keep their colours. CI runs this as
+`.github/workflows/brand-guard.yml`.

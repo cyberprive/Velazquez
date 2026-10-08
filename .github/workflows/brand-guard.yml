@@ -1,0 +1,22 @@
+name: brand-guard
+
+# Fails the build if a page or stylesheet still reaches for a pre-kit colour
+# (the old Carbon / Ice Blue site palette, Orangetheory's orange as an accent)
+# or for the retired PNG logo. After the 2026-10-08 identity kit roll-out this
+# is the net that catches the one inline style nobody rechecked.
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  brand:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check palette and logo references
+        run: node scripts/check-brand.mjs
