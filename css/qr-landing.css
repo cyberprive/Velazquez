@@ -1,8 +1,9 @@
 /* ============================================
    Real Zero — QR landing pages (Season of Strength)
    /fuerza · /proteina · /recuperacion
-   Shares the /velazquez design language:
-   PP Right Grotesk · orange #FF6F0D · bone on dark.
+   Shares the /velazquez design language: PP Right Grotesk,
+   coloured with the Real Zero identity kit (approved 2026-10-08):
+   Ink on Paper, White cards, Dark Blue the only accent.
    PP Right Grotesk ships 300/400/500/800 only —
    emphasis uses 500, headings use 800.
    ============================================ */
@@ -45,14 +46,15 @@
    ============================================ */
 
 :root {
-  --orange: #FF6F0D;
-  --orange-soft: rgba(255, 111, 13, 0.12);
-  --bone: #FDF7EA;
-  --dark: #0A0A0A;
-  --surface: #141414;
-  --surface-2: #1B1B1B;
-  --line: #2A2A2A;
-  --text-dim: rgba(253, 247, 234, 0.65);
+  /* Real Zero identity kit — three colours, no more */
+  --ink: #1E2226;
+  --white: #FFFFFF;
+  --blue: #1D2D3D;                 /* the only accent */
+  --blue-soft: rgba(29, 45, 61, 0.08);
+  --paper: #F2F2F3;
+  --muted: #5F6469;                /* Ink softened — 5.3:1 on Paper */
+  --line: #D7D9DB;
+  --text-dim: var(--muted);
 
   --font: 'PP Right Grotesk', -apple-system, 'Helvetica Neue', Arial, sans-serif;
   --tracking: -0.02em;
@@ -83,8 +85,8 @@ html {
 }
 
 body {
-  background: var(--dark);
-  color: var(--bone);
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font);
   font-weight: 300;
   letter-spacing: var(--tracking);
@@ -97,7 +99,7 @@ img { display: block; max-width: 100%; }
 
 strong { font-weight: 500; }
 
-:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 
 
 /* ============================================
@@ -113,7 +115,7 @@ header { padding: 28px 0 8px; }
   font-size: .72rem;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--blue);
   font-weight: 800;
 }
 
@@ -139,12 +141,12 @@ h1 .tachado::after {
   position: absolute;
   left: -2%; right: -2%; top: 52%;
   height: .09em;
-  background: var(--orange);
+  background: var(--blue);
   transform: rotate(-2deg);
   border-radius: 2px;
 }
 
-h1 em { font-style: normal; color: var(--orange); }
+h1 em { font-style: normal; color: var(--blue); }
 
 .lede { margin-top: 16px; font-size: 1.05rem; color: var(--text-dim); max-width: 56ch; }
 
@@ -158,7 +160,7 @@ h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; letter-spacing: 
    ============================================ */
 
 .card {
-  background: var(--surface);
+  background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--card-radius);
   padding: 20px;
@@ -166,7 +168,7 @@ h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; letter-spacing: 
 }
 
 .card p { color: var(--text-dim); font-size: .95rem; }
-.card p strong { color: var(--bone); }
+.card p strong { color: var(--ink); }
 
 .mito .tag, .realidad .tag {
   display: inline-block;
@@ -180,14 +182,14 @@ h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; letter-spacing: 
 }
 
 .mito .tag {
-  background: var(--surface-2);
+  background: var(--paper);
   color: var(--text-dim);
   text-decoration: line-through;
-  text-decoration-color: var(--orange);
+  text-decoration-color: var(--blue);
   text-decoration-thickness: 2px;
 }
 
-.realidad .tag { background: var(--orange-soft); color: var(--orange); }
+.realidad .tag { background: var(--blue-soft); color: var(--blue); }
 
 
 /* ============================================
@@ -202,7 +204,7 @@ h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; letter-spacing: 
   overflow: hidden;
   border: 1px solid var(--line);
   aspect-ratio: 16/9;
-  background: var(--surface);
+  background: var(--white);
   cursor: pointer;
 }
 
@@ -220,19 +222,19 @@ h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; letter-spacing: 
   width: 68px;
   height: 68px;
   border-radius: 50%;
-  background: var(--orange);
+  background: var(--blue);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 30px rgba(255, 111, 13, 0.4);
+  box-shadow: 0 8px 30px rgba(29, 45, 61, 0.25);
 }
 
-.video .play svg { width: 26px; height: 26px; fill: var(--dark); margin-left: 4px; }
+.video .play svg { width: 26px; height: 26px; fill: var(--white); margin-left: 4px; }
 
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
 .video-caption { font-size: .82rem; color: var(--text-dim); margin-top: 10px; }
-.video-caption a { color: var(--orange); text-decoration: none; }
+.video-caption a { color: var(--blue); text-decoration: none; }
 
 
 /* ============================================
@@ -240,7 +242,7 @@ h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; letter-spacing: 
    ============================================ */
 
 .calc {
-  background: var(--surface);
+  background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--card-radius);
   padding: 24px;
@@ -251,10 +253,10 @@ h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; letter-spacing: 
 .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
 
 input[type=number] {
-  background: var(--surface-2);
+  background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--card-radius);
-  color: var(--bone);
+  color: var(--ink);
   font-family: var(--font);
   font-size: 1.3rem;
   font-weight: 500;
@@ -266,7 +268,7 @@ input[type=number] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button { -webkit-appearance: none; }
 
-input:focus { outline: 2px solid var(--orange); border-color: var(--orange); }
+input:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
 
 .unit { color: var(--text-dim); font-weight: 500; }
 
@@ -276,7 +278,7 @@ input:focus { outline: 2px solid var(--orange); border-color: var(--orange); }
   font-size: clamp(2.2rem, 9vw, 3.2rem);
   font-weight: 800;
   letter-spacing: -.02em;
-  color: var(--orange);
+  color: var(--blue);
   line-height: 1;
 }
 
@@ -287,7 +289,7 @@ input:focus { outline: 2px solid var(--orange); border-color: var(--orange); }
 .equiv { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
 
 .equiv div {
-  background: var(--surface-2);
+  background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--card-radius);
   padding: 12px 14px;
@@ -295,7 +297,7 @@ input:focus { outline: 2px solid var(--orange); border-color: var(--orange); }
   color: var(--text-dim);
 }
 
-.equiv div strong { display: block; color: var(--bone); font-size: 1.05rem; }
+.equiv div strong { display: block; color: var(--ink); font-size: 1.05rem; }
 
 .note { font-size: .8rem; color: var(--text-dim); margin-top: 14px; }
 
@@ -309,7 +311,7 @@ input:focus { outline: 2px solid var(--orange); border-color: var(--orange); }
 .step {
   display: flex;
   gap: 16px;
-  background: var(--surface);
+  background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--card-radius);
   padding: 18px 20px;
@@ -322,8 +324,8 @@ input:focus { outline: 2px solid var(--orange); border-color: var(--orange); }
   flex: 0 0 34px;
   height: 34px;
   border-radius: 50%;
-  background: var(--orange-soft);
-  color: var(--orange);
+  background: var(--blue-soft);
+  color: var(--blue);
   font-weight: 800;
   display: flex;
   align-items: center;
@@ -332,7 +334,7 @@ input:focus { outline: 2px solid var(--orange); border-color: var(--orange); }
 }
 
 .step div { font-size: .95rem; color: var(--text-dim); }
-.step div strong { color: var(--bone); display: block; margin-bottom: 2px; }
+.step div strong { color: var(--ink); display: block; margin-bottom: 2px; }
 
 
 /* ============================================
@@ -341,18 +343,18 @@ input:focus { outline: 2px solid var(--orange); border-color: var(--orange); }
 
 .links a {
   display: block;
-  background: var(--surface);
+  background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--card-radius);
   padding: 16px 20px;
   margin-bottom: 10px;
-  color: var(--bone);
+  color: var(--ink);
   text-decoration: none;
   font-size: .95rem;
   transition: border-color .15s;
 }
 
-.links a:hover, .links a:focus-visible { border-color: var(--orange); }
+.links a:hover, .links a:focus-visible { border-color: var(--blue); }
 
 .links a small { display: block; color: var(--text-dim); font-size: .8rem; margin-top: 2px; }
 
@@ -362,15 +364,15 @@ input:focus { outline: 2px solid var(--orange); border-color: var(--orange); }
    ============================================ */
 
 .tiein {
-  background: linear-gradient(135deg, var(--orange-soft), transparent 60%), var(--surface);
+  background: linear-gradient(135deg, var(--blue-soft), transparent 60%), var(--white);
   border: 1px solid var(--line);
   border-radius: var(--card-radius);
   padding: 22px;
 }
 
-.tiein h2 { color: var(--orange); margin-bottom: 8px; }
+.tiein h2 { color: var(--blue); margin-bottom: 8px; }
 .tiein p { color: var(--text-dim); font-size: .95rem; }
-.tiein p strong { color: var(--bone); }
+.tiein p strong { color: var(--ink); }
 
 
 /* ============================================
